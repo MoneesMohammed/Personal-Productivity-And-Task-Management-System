@@ -1,4 +1,4 @@
-# Productivity-And-Task-Management-System (PTMS)
+# Personal Productivity And Task Management System (PPTMS)
 Advanced Task &amp; Productivity Management System Built with C# WinForms, SQL Server, ADO.NET Features: Reminders, Task History, Habits Tracking, Productivity Analysis.
 
 ---
@@ -6,7 +6,17 @@ Advanced Task &amp; Productivity Management System Built with C# WinForms, SQL S
 This project is not a simple To-Do application.
 It is designed as a personal productivity management system
 focusing on task lifecycle tracking, habit building, and performance analysis.
+---
+This project is designed as a personal productivity management system,
+not just a simple To-Do application.
 
+It focuses on:
+
+- Task lifecycle management
+- Habit tracking
+- Audit logging
+- Reminder system
+- Productivity analysis
 ---
 ## 📌 Features
 - Advanced task management
