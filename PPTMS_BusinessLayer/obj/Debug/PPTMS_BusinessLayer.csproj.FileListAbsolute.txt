@@ -1,0 +1,9 @@
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\bin\Debug\PPTMS_BusinessLayer.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\bin\Debug\PPTMS_BusinessLayer.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\bin\Debug\PPTMS_DataAccessLayar.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\bin\Debug\PPTMS_DataAccessLayar.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\obj\Debug\PPTMS_BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\obj\Debug\PPTMS_BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\obj\Debug\PPTMS_Bu.A3A44515.Up2Date
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\obj\Debug\PPTMS_BusinessLayer.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_BusinessLayer\obj\Debug\PPTMS_BusinessLayer.pdb

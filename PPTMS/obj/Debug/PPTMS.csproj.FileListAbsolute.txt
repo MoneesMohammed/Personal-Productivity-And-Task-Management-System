@@ -1,0 +1,16 @@
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS.exe.config
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS.exe
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS_BusinessLayer.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS_BusinessLayer.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.csproj.AssemblyReference.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.Properties.Resources.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.csproj.GenerateResource.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.csproj.CoreCompileInputs.cache
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.csproj.Up2Date
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.exe
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.exe.config
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS_DataAccessLayar.dll
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS_DataAccessLayar.pdb
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.frmMain.resources
