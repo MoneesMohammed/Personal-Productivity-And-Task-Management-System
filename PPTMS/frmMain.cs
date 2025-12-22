@@ -40,7 +40,7 @@ namespace PPTMS
         {
             Button btn = (Button)sender;
 
-            if (btn.Text == "Exit")
+            if (btn.Text == "Logout")
             {
                 btn.BackColor = Color.FromArgb(40, Color.Red);
             }
