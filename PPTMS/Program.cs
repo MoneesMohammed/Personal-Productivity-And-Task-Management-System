@@ -16,7 +16,22 @@ namespace PPTMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            //Application.Run(new frmMain());
+
+            while (true)
+            {
+                frmLogin loginForm = new frmLogin();
+
+                //login successfully
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new frmMain());
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
     }
 }

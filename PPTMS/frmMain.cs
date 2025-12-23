@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PPTMS.Global_Classes;
+using PPTMS.UserControls.CtrlUser;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,9 +61,29 @@ namespace PPTMS
             
         }
 
-        private void but4_Click(object sender, EventArgs e)
+       
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            CtrlChangePassword ctrlUserDetails = new CtrlChangePassword();
+            ctrlUserDetails.LoadUserInfo(clsGlobal.CurrentUser.UserID);
+            LoadControl(ctrlUserDetails);
+        }
+
+        private void butLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LoadControl(UserControl control)
+        {
+            panelContent.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(control);
+        }
+
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -14,3 +14,7 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.exe.config
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS_DataAccessLayar.dll
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\bin\Debug\PPTMS_DataAccessLayar.pdb
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.frmMain.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.frmLogin.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.Users.frmAddEditUserInfo.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlUser.CtrlUserDetails.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlUser.CtrlChangePassword.resources

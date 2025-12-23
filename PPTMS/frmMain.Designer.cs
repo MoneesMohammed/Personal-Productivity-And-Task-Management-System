@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.picMain = new System.Windows.Forms.PictureBox();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnHabits = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -43,7 +42,6 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panelSidebar.SuspendLayout();
             this.panelMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +76,7 @@
             // 
             // panelMain
             // 
-            this.panelMain.Controls.Add(this.picMain);
+            this.panelMain.Controls.Add(this.panelContent);
             this.panelMain.Controls.Add(this.panelSidebar);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
@@ -86,15 +84,12 @@
             this.panelMain.Size = new System.Drawing.Size(1585, 947);
             this.panelMain.TabIndex = 14;
             // 
-            // picMain
+            // panelContent
             // 
-            this.picMain.Image = ((System.Drawing.Image)(resources.GetObject("picMain.Image")));
-            this.picMain.Location = new System.Drawing.Point(358, 0);
-            this.picMain.Name = "picMain";
-            this.picMain.Size = new System.Drawing.Size(1227, 947);
-            this.picMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMain.TabIndex = 5;
-            this.picMain.TabStop = false;
+            this.panelContent.Location = new System.Drawing.Point(355, 3);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1227, 941);
+            this.panelContent.TabIndex = 8;
             // 
             // btnCategories
             // 
@@ -158,6 +153,7 @@
             this.btnStatistics.TabIndex = 13;
             this.btnStatistics.Text = "Statistics";
             this.btnStatistics.UseVisualStyleBackColor = false;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             this.btnStatistics.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnStatistics.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
@@ -194,7 +190,7 @@
             this.butLogout.TabIndex = 11;
             this.butLogout.Text = "Logout";
             this.butLogout.UseVisualStyleBackColor = false;
-            this.butLogout.Click += new System.EventHandler(this.but4_Click);
+            this.butLogout.Click += new System.EventHandler(this.butLogout_Click);
             this.butLogout.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.butLogout.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
@@ -213,6 +209,7 @@
             this.btnProfile.TabIndex = 9;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             this.btnProfile.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnProfile.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
@@ -248,15 +245,12 @@
             this.SizeChanged += new System.EventHandler(this.frmMain_SizeChanged);
             this.panelSidebar.ResumeLayout(false);
             this.panelMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picMain;
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnHome;
@@ -268,6 +262,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnHabits;
+        private System.Windows.Forms.Panel panelContent;
     }
 }
 
