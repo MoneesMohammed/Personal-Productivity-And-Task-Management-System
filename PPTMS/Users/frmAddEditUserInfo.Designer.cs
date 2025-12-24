@@ -200,7 +200,7 @@
             this.rbFemale.AutoSize = true;
             this.rbFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFemale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rbFemale.Location = new System.Drawing.Point(428, 397);
+            this.rbFemale.Location = new System.Drawing.Point(415, 397);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(92, 28);
             this.rbFemale.TabIndex = 75;
@@ -215,7 +215,7 @@
             this.rbMale.Checked = true;
             this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.rbMale.Location = new System.Drawing.Point(314, 395);
+            this.rbMale.Location = new System.Drawing.Point(284, 395);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(69, 28);
             this.rbMale.TabIndex = 74;
@@ -294,7 +294,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::PPTMS.Properties.Resources.Female;
-            this.pictureBox2.Location = new System.Drawing.Point(398, 397);
+            this.pictureBox2.Location = new System.Drawing.Point(385, 397);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -304,7 +304,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PPTMS.Properties.Resources.Male;
-            this.pictureBox1.Location = new System.Drawing.Point(284, 397);
+            this.pictureBox1.Location = new System.Drawing.Point(252, 397);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

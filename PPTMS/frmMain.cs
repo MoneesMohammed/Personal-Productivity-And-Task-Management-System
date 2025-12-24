@@ -1,4 +1,5 @@
 ﻿using PPTMS.Global_Classes;
+using PPTMS.UserControls.CtrlCategories;
 using PPTMS.UserControls.CtrlUser;
 using System;
 using System.Collections.Generic;
@@ -66,7 +67,7 @@ namespace PPTMS
         {
             CtrlChangePassword ctrlUserDetails = new CtrlChangePassword();
             ctrlUserDetails.LoadUserInfo(clsGlobal.CurrentUser.UserID);
-            LoadControl(ctrlUserDetails);
+            LoadCenteredControl(ctrlUserDetails);
         }
 
         private void butLogout_Click(object sender, EventArgs e)
@@ -74,7 +75,17 @@ namespace PPTMS
             this.Close();
         }
 
-        private void LoadControl(UserControl control)
+        private void LoadCenteredControl(UserControl control)
+        {
+            panelContent.Controls.Clear();
+            control.Dock = DockStyle.None;
+            panelContent.Controls.Add(control);
+
+            control.Left = (panelContent.ClientSize.Width - control.Width)  / 2;
+            //control.Top = (panelContent.ClientSize.Height - control.Height) / 3;
+        }
+
+        private void LoadFillControl(UserControl control)
         {
             panelContent.Controls.Clear();
             control.Dock = DockStyle.Fill;
@@ -84,6 +95,13 @@ namespace PPTMS
         private void btnStatistics_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            CtrlFullCategories categories = new CtrlFullCategories();
+
+            LoadCenteredControl(categories);
         }
     }
 }

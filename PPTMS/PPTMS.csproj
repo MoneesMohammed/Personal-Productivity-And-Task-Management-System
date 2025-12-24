@@ -63,6 +63,29 @@
     <Compile Include="global classes\clsValidatoin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlCategories\CtrlAddEditCategoryInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlCategories\CtrlAddEditCategoryInfo.Designer.cs">
+      <DependentUpon>CtrlAddEditCategoryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlCategories\CtrlCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlCategories\CtrlCategories.Designer.cs">
+      <DependentUpon>CtrlCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlCategories\CtrlFullCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlCategories\CtrlFullCategories.Designer.cs">
+      <DependentUpon>CtrlFullCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlUser\CtrlChangePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,14 +112,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="UserControls\CtrlCategories\CtrlAddEditCategoryInfo.resx">
+      <DependentUpon>CtrlAddEditCategoryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlCategories\CtrlCategories.resx">
+      <DependentUpon>CtrlCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlCategories\CtrlFullCategories.resx">
+      <DependentUpon>CtrlFullCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlUser\CtrlChangePassword.resx">
       <DependentUpon>CtrlChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +217,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reset-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

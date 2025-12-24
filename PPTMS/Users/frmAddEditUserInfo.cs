@@ -116,6 +116,10 @@ namespace PPTMS.Users
                 rbFemale.Checked = true;
             }
 
+            txtPassword.Enabled = false;
+            txtConfirmPassword.Enabled = false;
+            btnShowHidePassword.Enabled = false;
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -140,8 +144,8 @@ namespace PPTMS.Users
             {
 
                 _Mode = enMode.Update;
-                this.Text = "Update User";
-                lblMode.Text = "Update User";
+                this.Text = "Edit Account";
+                lblMode.Text = "Edit Account";
                 lblUserID.Text = _User.UserID.ToString();
 
                 MessageBox.Show("Data saved successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);

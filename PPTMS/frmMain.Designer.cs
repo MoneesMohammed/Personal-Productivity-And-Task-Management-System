@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.panelContent = new System.Windows.Forms.Panel();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnHabits = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnStatistics = new System.Windows.Forms.Button();
             this.btnTask = new System.Windows.Forms.Button();
             this.butLogout = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelContent = new System.Windows.Forms.Panel();
             this.panelSidebar.SuspendLayout();
-            this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -64,33 +64,6 @@
             this.panelSidebar.TabIndex = 7;
             this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 80);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Personal Productivity And Task Management System";
-            // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.panelContent);
-            this.panelMain.Controls.Add(this.panelSidebar);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1585, 947);
-            this.panelMain.TabIndex = 14;
-            // 
-            // panelContent
-            // 
-            this.panelContent.Location = new System.Drawing.Point(355, 3);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1227, 941);
-            this.panelContent.TabIndex = 8;
-            // 
             // btnCategories
             // 
             this.btnCategories.BackColor = System.Drawing.Color.Transparent;
@@ -98,7 +71,7 @@
             this.btnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategories.ForeColor = System.Drawing.Color.White;
-            this.btnCategories.Image = global::PPTMS.Properties.Resources.Categories;
+            this.btnCategories.Image = global::PPTMS.Properties.Resources.menu;
             this.btnCategories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategories.Location = new System.Drawing.Point(11, 262);
             this.btnCategories.Name = "btnCategories";
@@ -106,6 +79,7 @@
             this.btnCategories.TabIndex = 17;
             this.btnCategories.Text = "Categories";
             this.btnCategories.UseVisualStyleBackColor = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             this.btnCategories.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnCategories.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
@@ -126,6 +100,16 @@
             this.btnHabits.UseVisualStyleBackColor = false;
             this.btnHabits.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnHabits.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 80);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Personal Productivity And Task Management System";
             // 
             // pictureBox1
             // 
@@ -231,6 +215,23 @@
             this.btnHome.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnHome.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.panelContent);
+            this.panelMain.Controls.Add(this.panelSidebar);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1585, 947);
+            this.panelMain.TabIndex = 14;
+            // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(355, 3);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1227, 941);
+            this.panelContent.TabIndex = 8;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,8 +245,8 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.SizeChanged += new System.EventHandler(this.frmMain_SizeChanged);
             this.panelSidebar.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
