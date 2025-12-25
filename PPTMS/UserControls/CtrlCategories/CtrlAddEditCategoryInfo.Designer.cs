@@ -34,12 +34,12 @@
             this.txtCategoryName = new System.Windows.Forms.TextBox();
             this.lblCategoryID = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnBack = new System.Windows.Forms.Button();
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMode
@@ -97,6 +97,10 @@
             this.label13.TabIndex = 55;
             this.label13.Text = "Category ID ";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,7 +116,7 @@
             // 
             // picIcon
             // 
-            this.picIcon.Image = global::PPTMS.Properties.Resources.category__2_;
+            this.picIcon.Image = global::PPTMS.Properties.Resources.dashboard__1_;
             this.picIcon.Location = new System.Drawing.Point(54, 3);
             this.picIcon.Name = "picIcon";
             this.picIcon.Size = new System.Drawing.Size(116, 96);
@@ -134,10 +138,6 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // CtrlAddEditCategoryInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,8 +153,8 @@
             this.Name = "CtrlAddEditCategoryInfo";
             this.Size = new System.Drawing.Size(559, 324);
             this.Load += new System.EventHandler(this.CtrlAddEditCategoryInfo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

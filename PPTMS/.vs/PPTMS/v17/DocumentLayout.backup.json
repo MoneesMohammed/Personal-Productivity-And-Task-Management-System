@@ -3,58 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlcategories\\ctrlcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrlcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrltasks\\ctrltasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrltasks\\ctrltasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrltasks\\ctrltasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrltasks\\ctrltasks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\tasksdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\taskcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlcategories\\ctrlcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrlcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlcategories\\ctrladdeditcategoryinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrladdeditcategoryinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlcategories\\ctrladdeditcategoryinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrladdeditcategoryinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlcategories\\ctrlfullcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrlfullcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\users\\frmaddedituserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:users\\frmaddedituserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlcategories\\ctrlfullcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrlfullcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlcategories\\ctrlcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlcategories\\ctrlcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\taskcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\taskcategoriesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\usersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\taskcategoriesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\peopledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\usersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -64,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -76,83 +70,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CtrlFullCategories.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlFullCategories.cs",
-              "RelativeDocumentMoniker": "UserControls\\CtrlCategories\\CtrlFullCategories.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlFullCategories.cs",
-              "RelativeToolTip": "UserControls\\CtrlCategories\\CtrlFullCategories.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAcwCwAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CtrlTasks.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlTasks\\CtrlTasks.cs",
+              "RelativeDocumentMoniker": "UserControls\\CtrlTasks\\CtrlTasks.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlTasks\\CtrlTasks.cs",
+              "RelativeToolTip": "UserControls\\CtrlTasks\\CtrlTasks.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T12:54:27.309Z",
+              "WhenOpened": "2025-12-25T10:22:46.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CtrlFullCategories.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlFullCategories.cs",
-              "RelativeDocumentMoniker": "UserControls\\CtrlCategories\\CtrlFullCategories.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlFullCategories.cs [Design]",
-              "RelativeToolTip": "UserControls\\CtrlCategories\\CtrlFullCategories.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "CtrlTasks.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlTasks\\CtrlTasks.cs",
+              "RelativeDocumentMoniker": "UserControls\\CtrlTasks\\CtrlTasks.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlTasks\\CtrlTasks.cs [Design]",
+              "RelativeToolTip": "UserControls\\CtrlTasks\\CtrlTasks.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T12:40:40.418Z",
+              "WhenOpened": "2025-12-24T17:21:32.684Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "frmAddEditUserInfo.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\Users\\frmAddEditUserInfo.cs",
-              "RelativeDocumentMoniker": "Users\\frmAddEditUserInfo.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\Users\\frmAddEditUserInfo.cs",
-              "RelativeToolTip": "Users\\frmAddEditUserInfo.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAAwJMAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T12:15:23.088Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CtrlAddEditCategoryInfo.cs",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs",
-              "RelativeDocumentMoniker": "UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs",
-              "RelativeToolTip": "UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAmwGMAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T12:14:34.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CtrlAddEditCategoryInfo.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs",
-              "RelativeDocumentMoniker": "UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs",
-              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs [Design]",
-              "RelativeToolTip": "UserControls\\CtrlCategories\\CtrlAddEditCategoryInfo.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T11:53:54.815Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "CtrlCategories.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlCategories.cs",
               "RelativeDocumentMoniker": "UserControls\\CtrlCategories\\CtrlCategories.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlCategories.cs",
               "RelativeToolTip": "UserControls\\CtrlCategories\\CtrlCategories.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAIwFoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAmwF0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T12:43:19.602Z",
+              "WhenOpened": "2025-12-25T12:10:17.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "CtrlCategories.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlCategories\\CtrlCategories.cs",
               "RelativeDocumentMoniker": "UserControls\\CtrlCategories\\CtrlCategories.cs",
@@ -164,20 +120,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "frmMain.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmMain.cs",
               "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAmwGAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAwG0AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-22T14:21:55.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
@@ -189,53 +145,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
+              "Title": "TasksData.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\TasksData.cs",
+              "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\TasksData.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\TasksData.cs",
+              "RelativeToolTip": "..\\PPTMS_DataAccessLayar\\TasksData.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAgwLUAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T10:34:25.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\Task.cs",
+              "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\Task.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\Task.cs",
+              "RelativeToolTip": "..\\PPTMS_BusinessLayer\\Task.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T10:34:48.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "TaskCategoriesData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\TaskCategoriesData.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\TaskCategoriesData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\TaskCategoriesData.cs",
               "RelativeToolTip": "..\\PPTMS_DataAccessLayar\\TaskCategoriesData.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAqwIoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAqwB4AAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-24T10:38:33.09Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "TaskCategory.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\TaskCategory.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\TaskCategory.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\TaskCategory.cs",
               "RelativeToolTip": "..\\PPTMS_BusinessLayer\\TaskCategory.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAkwFcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-24T10:37:46.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "PeopleData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\PeopleData.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\PeopleData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\PeopleData.cs",
               "RelativeToolTip": "..\\PPTMS_DataAccessLayar\\PeopleData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADsAAABjAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDsAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T12:20:49.089Z"
+              "WhenOpened": "2025-12-22T12:20:49.089Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\Person.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\Person.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\Person.cs",
               "RelativeToolTip": "..\\PPTMS_BusinessLayer\\Person.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAuwDkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAA8wDkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-22T12:21:14.83Z"
+              "WhenOpened": "2025-12-22T12:21:14.83Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -245,20 +229,20 @@
               "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\UsersData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\UsersData.cs",
               "RelativeToolTip": "..\\PPTMS_DataAccessLayar\\UsersData.cs",
-              "ViewState": "AgIAAEkBAAAAAAAAAAAYwF8BAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAAAGABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-22T11:28:54.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\User.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\User.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\User.cs",
               "RelativeToolTip": "..\\PPTMS_BusinessLayer\\User.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAAAJIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAAAKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-22T11:28:04.145Z",
               "EditorCaption": ""

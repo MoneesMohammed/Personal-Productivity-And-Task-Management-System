@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -204,6 +205,35 @@ namespace PPTMS.UserControls.CtrlUser
             {
                 MessageBox.Show("Error : data is not saved successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lblTitil_Paint(object sender, PaintEventArgs e)
+        {
+            Label lbl = (Label)sender;
+
+            // Quality improvement
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+            // Gradient background drawing
+            using (LinearGradientBrush brush = new LinearGradientBrush(
+                lbl.ClientRectangle,
+                Color.FromArgb(241, 44, 18),
+                Color.FromArgb(245, 179, 59),
+                100f))
+            {
+                e.Graphics.FillRectangle(brush, lbl.ClientRectangle);
+            }
+
+            //Text drawing
+            TextRenderer.DrawText(
+                e.Graphics,
+                lbl.Text,
+                lbl.Font,
+                lbl.ClientRectangle,
+                Color.White,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+            );
+
         }
     }
 }

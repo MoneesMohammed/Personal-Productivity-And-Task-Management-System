@@ -52,12 +52,14 @@ namespace PPTMS.UserControls.CtrlCategories
                 lblMode.Text = "Add New Category";
                 _TaskCategory = new clsTaskCategory();
                 picIcon.Image = Resources.category__2_;
+                lblMode.ForeColor = Color.FromArgb(201, 62, 186);
             }
             else
             {
                 lblMode.Text = "Edit Category";
+                picIcon.Image = Resources.dashboard__1_;
+                lblMode.ForeColor = Color.FromArgb(172, 0, 255);
                 btnSave.Enabled = true;
-                picIcon.Image = Resources.category__3_;
             }
 
             txtCategoryName.Text = "";

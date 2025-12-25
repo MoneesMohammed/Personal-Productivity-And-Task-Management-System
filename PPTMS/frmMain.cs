@@ -1,5 +1,6 @@
 ﻿using PPTMS.Global_Classes;
 using PPTMS.UserControls.CtrlCategories;
+using PPTMS.UserControls.CtrlTasks;
 using PPTMS.UserControls.CtrlUser;
 using System;
 using System.Collections.Generic;
@@ -102,6 +103,12 @@ namespace PPTMS
             CtrlFullCategories categories = new CtrlFullCategories();
 
             LoadCenteredControl(categories);
+        }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            CtrlTasks ctrlTasks = new CtrlTasks();
+            LoadCenteredControl(ctrlTasks);
         }
     }
 }

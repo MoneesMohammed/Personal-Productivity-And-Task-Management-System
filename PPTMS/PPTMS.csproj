@@ -86,6 +86,12 @@
     <Compile Include="UserControls\CtrlCategories\CtrlFullCategories.Designer.cs">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlTasks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlTasks.Designer.cs">
+      <DependentUpon>CtrlTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlUser\CtrlChangePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlCategories\CtrlFullCategories.resx">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\CtrlTasks.resx">
+      <DependentUpon>CtrlTasks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlUser\CtrlChangePassword.resx">
       <DependentUpon>CtrlChangePassword.cs</DependentUpon>
@@ -247,6 +256,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\category %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incompetent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reminder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attached.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

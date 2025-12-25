@@ -21,3 +21,4 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlCategories.CtrlCategories.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlCategories.CtrlAddEditCategoryInfo.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlCategories.CtrlFullCategories.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlTasks.resources

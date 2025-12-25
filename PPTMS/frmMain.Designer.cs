@@ -156,6 +156,7 @@
             this.btnTask.TabIndex = 12;
             this.btnTask.Text = "Task";
             this.btnTask.UseVisualStyleBackColor = false;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             this.btnTask.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnTask.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
