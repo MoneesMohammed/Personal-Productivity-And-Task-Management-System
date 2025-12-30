@@ -149,7 +149,7 @@ namespace PPTMS_DataAccessLayar
         }
 
         //Do not permanently delete Task Replace it
-        public static bool SetStatusArchive(int TaskID)
+        public static bool MarkAsArchive(int TaskID)
         {
             int RowAffected = 0;
 
@@ -246,7 +246,7 @@ namespace PPTMS_DataAccessLayar
             return (RowAffected > 0);
         }
 
-        public static bool SetStatusCompleted(int TaskID)
+        public static bool MarkAsCompleted(int TaskID)
         {
             int RowAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);

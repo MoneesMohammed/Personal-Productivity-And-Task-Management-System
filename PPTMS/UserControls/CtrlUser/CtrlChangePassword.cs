@@ -16,6 +16,8 @@ namespace PPTMS.UserControls.CtrlUser
 {
     public partial class CtrlChangePassword : UserControl
     {
+        public Action<int> OnEditUserInfo_LinkClicked;
+
         private clsUser _User;
         private int _UserID = -1;
 
@@ -42,7 +44,14 @@ namespace PPTMS.UserControls.CtrlUser
 
             _FillUserInfo();
 
+            ctrlUserDetails1.OnEditUserInfo_LinkClicked += EditUserInfo_LinkClicked;
         }
+
+        private void EditUserInfo_LinkClicked(int obj)
+        {
+            OnEditUserInfo_LinkClicked?.Invoke(obj);
+        }
+
 
         private void ResetUserInfo()
         {

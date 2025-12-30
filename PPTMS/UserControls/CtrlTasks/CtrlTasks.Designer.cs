@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRecodes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTasks = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.pBox1 = new System.Windows.Forms.PictureBox();
-            this.butAddNewTask = new System.Windows.Forms.Button();
             this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmReminders = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAttachments = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmArchiveTask = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmMarkAsCompleted = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmAddNewTask = new System.Windows.Forms.ToolStripMenuItem();
+            this.pBox1 = new System.Windows.Forms.PictureBox();
+            this.butAddNewTask = new System.Windows.Forms.Button();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.txtFilterBy = new System.Windows.Forms.TextBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
@@ -110,36 +110,36 @@
             this.dgvTasks.AllowUserToDeleteRows = false;
             this.dgvTasks.AllowUserToOrderColumns = true;
             this.dgvTasks.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTasks.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTasks.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTasks.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTasks.GridColor = System.Drawing.SystemColors.Menu;
             this.dgvTasks.Location = new System.Drawing.Point(3, 160);
             this.dgvTasks.Name = "dgvTasks";
             this.dgvTasks.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTasks.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTasks.Size = new System.Drawing.Size(1162, 711);
             this.dgvTasks.TabIndex = 57;
@@ -160,23 +160,79 @@
             this.toolStripSeparator2,
             this.tsmAddNewTask});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(272, 344);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(272, 366);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // tsmShowDetails
+            // 
+            this.tsmShowDetails.Image = global::PPTMS.Properties.Resources.list;
+            this.tsmShowDetails.Name = "tsmShowDetails";
+            this.tsmShowDetails.Size = new System.Drawing.Size(271, 46);
+            this.tsmShowDetails.Text = "Show Details";
+            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
+            // 
+            // tsmEdit
+            // 
+            this.tsmEdit.Image = global::PPTMS.Properties.Resources.clipboard;
+            this.tsmEdit.Name = "tsmEdit";
+            this.tsmEdit.Size = new System.Drawing.Size(271, 46);
+            this.tsmEdit.Text = "Edit";
+            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
             // 
-            // toolStripSeparator2
+            // tsmReminders
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(268, 6);
+            this.tsmReminders.Image = global::PPTMS.Properties.Resources.reminder;
+            this.tsmReminders.Name = "tsmReminders";
+            this.tsmReminders.Size = new System.Drawing.Size(271, 46);
+            this.tsmReminders.Text = "Reminders";
+            this.tsmReminders.Click += new System.EventHandler(this.tsmReminders_Click);
+            // 
+            // tsmAttachments
+            // 
+            this.tsmAttachments.Image = global::PPTMS.Properties.Resources.attached;
+            this.tsmAttachments.Name = "tsmAttachments";
+            this.tsmAttachments.Size = new System.Drawing.Size(271, 46);
+            this.tsmAttachments.Text = "Attachments";
+            this.tsmAttachments.Click += new System.EventHandler(this.tsmAttachments_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(268, 6);
+            // 
+            // tsmArchiveTask
+            // 
+            this.tsmArchiveTask.Image = global::PPTMS.Properties.Resources.archive;
+            this.tsmArchiveTask.Name = "tsmArchiveTask";
+            this.tsmArchiveTask.Size = new System.Drawing.Size(271, 46);
+            this.tsmArchiveTask.Text = "Archive Task";
+            this.tsmArchiveTask.Click += new System.EventHandler(this.tsmArchiveTask_Click);
+            // 
+            // tsmMarkAsCompleted
+            // 
+            this.tsmMarkAsCompleted.Image = global::PPTMS.Properties.Resources.test1;
+            this.tsmMarkAsCompleted.Name = "tsmMarkAsCompleted";
+            this.tsmMarkAsCompleted.Size = new System.Drawing.Size(271, 46);
+            this.tsmMarkAsCompleted.Text = "Mark as Completed";
+            this.tsmMarkAsCompleted.Click += new System.EventHandler(this.tsmMarkAsCompleted_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(268, 6);
+            // 
+            // tsmAddNewTask
+            // 
+            this.tsmAddNewTask.Image = global::PPTMS.Properties.Resources.tab;
+            this.tsmAddNewTask.Name = "tsmAddNewTask";
+            this.tsmAddNewTask.Size = new System.Drawing.Size(271, 46);
+            this.tsmAddNewTask.Text = "Add New Task";
+            this.tsmAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
             // 
             // pBox1
             // 
@@ -200,62 +256,6 @@
             this.butAddNewTask.TabIndex = 59;
             this.butAddNewTask.UseVisualStyleBackColor = false;
             this.butAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
-            // 
-            // tsmShowDetails
-            // 
-            this.tsmShowDetails.Image = global::PPTMS.Properties.Resources.list;
-            this.tsmShowDetails.Name = "tsmShowDetails";
-            this.tsmShowDetails.Size = new System.Drawing.Size(271, 46);
-            this.tsmShowDetails.Text = "Show Details";
-            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
-            // 
-            // tsmEdit
-            // 
-            this.tsmEdit.Image = global::PPTMS.Properties.Resources.clipboard;
-            this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(271, 46);
-            this.tsmEdit.Text = "Edit";
-            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
-            // 
-            // tsmReminders
-            // 
-            this.tsmReminders.Image = global::PPTMS.Properties.Resources.reminder;
-            this.tsmReminders.Name = "tsmReminders";
-            this.tsmReminders.Size = new System.Drawing.Size(271, 46);
-            this.tsmReminders.Text = "Reminders";
-            this.tsmReminders.Click += new System.EventHandler(this.tsmReminders_Click);
-            // 
-            // tsmAttachments
-            // 
-            this.tsmAttachments.Image = global::PPTMS.Properties.Resources.attached;
-            this.tsmAttachments.Name = "tsmAttachments";
-            this.tsmAttachments.Size = new System.Drawing.Size(271, 46);
-            this.tsmAttachments.Text = "Attachments";
-            this.tsmAttachments.Click += new System.EventHandler(this.tsmAttachments_Click);
-            // 
-            // tsmArchiveTask
-            // 
-            this.tsmArchiveTask.Image = global::PPTMS.Properties.Resources.archive;
-            this.tsmArchiveTask.Name = "tsmArchiveTask";
-            this.tsmArchiveTask.Size = new System.Drawing.Size(271, 46);
-            this.tsmArchiveTask.Text = "Archive Task";
-            this.tsmArchiveTask.Click += new System.EventHandler(this.tsmArchiveTask_Click);
-            // 
-            // tsmMarkAsCompleted
-            // 
-            this.tsmMarkAsCompleted.Image = global::PPTMS.Properties.Resources.test1;
-            this.tsmMarkAsCompleted.Name = "tsmMarkAsCompleted";
-            this.tsmMarkAsCompleted.Size = new System.Drawing.Size(271, 46);
-            this.tsmMarkAsCompleted.Text = "Mark as Completed";
-            this.tsmMarkAsCompleted.Click += new System.EventHandler(this.tsmMarkAsCompleted_Click);
-            // 
-            // tsmAddNewTask
-            // 
-            this.tsmAddNewTask.Image = global::PPTMS.Properties.Resources.tab;
-            this.tsmAddNewTask.Name = "tsmAddNewTask";
-            this.tsmAddNewTask.Size = new System.Drawing.Size(271, 46);
-            this.tsmAddNewTask.Text = "Add New Task";
-            this.tsmAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
             // 
             // cbFilter
             // 

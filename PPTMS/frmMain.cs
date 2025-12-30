@@ -2,6 +2,7 @@
 using PPTMS.UserControls.CtrlCategories;
 using PPTMS.UserControls.CtrlTasks;
 using PPTMS.UserControls.CtrlUser;
+using PPTMS_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +11,15 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.Timer;
 
 namespace PPTMS
 {
     public partial class frmMain : Form
     {
+        Timer reminderTimer = new Timer();
+
         public frmMain()
         {
             InitializeComponent();
@@ -24,8 +27,52 @@ namespace PPTMS
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //picMain.Size = new System.Drawing.Size(this.Size.Width - 373, this.Size.Height - 85);
+            notifyIcon1.Visible = true;
+            notifyIcon1.Icon = SystemIcons.Application;
+            notifyIcon1.Text = "Task Reminder";
+
+            reminderTimer.Interval = 10 * 1000; // كل دقيقة
+            reminderTimer.Tick += ReminderTimer_Tick;
+            reminderTimer.Start();
         }
+
+        private void ReminderTimer_Tick(object sender, EventArgs e)
+        {
+             CheckReminders();
+        }
+
+        public void CheckReminders()
+        {
+            DataTable dtreminders = clsTaskReminder.GetPendingReminders(clsGlobal.CurrentUser.UserID);
+
+            if (dtreminders.Rows.Count <= 0)
+                return;
+
+            foreach (DataRow row in dtreminders.Rows)
+            {
+                clsTaskReminder TaskReminder = clsTaskReminder.Find(Convert.ToInt32(row["ReminderID"]));
+
+                ShowReminder(TaskReminder);
+
+                TaskReminder.MarkAsTriggered();
+            }
+
+        }
+
+
+        private void ShowReminder(clsTaskReminder taskReminder)
+        {
+            // MessageBox.Show($"Reminder for Task [ {taskReminder.TaskInfo.Title} ] Task ID: {taskReminder.TaskID}","Task Reminder",MessageBoxButtons.OK,MessageBoxIcon.Information);
+           
+            notifyIcon1.BalloonTipIcon  = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipTitle = "Task Reminder";
+            notifyIcon1.BalloonTipText  = $"⏰ {taskReminder.TaskInfo.Title}";
+
+
+            notifyIcon1.ShowBalloonTip(3000);
+        }
+
+
 
         private void panelSidebar_Paint(object sender, PaintEventArgs e)
         {
@@ -66,8 +113,8 @@ namespace PPTMS
        
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            CtrlChangePassword ctrlUserDetails = new CtrlChangePassword();
-            ctrlUserDetails.LoadUserInfo(clsGlobal.CurrentUser.UserID);
+            CtrlFullUser ctrlUserDetails = new CtrlFullUser(clsGlobal.CurrentUser.UserID);
+            
             LoadCenteredControl(ctrlUserDetails);
         }
 
@@ -107,7 +154,7 @@ namespace PPTMS
 
         private void btnTask_Click(object sender, EventArgs e)
         {
-            CtrlTasks ctrlTasks = new CtrlTasks();
+            CtrlFullTasks ctrlTasks = new CtrlFullTasks();
             LoadCenteredControl(ctrlTasks);
         }
     }

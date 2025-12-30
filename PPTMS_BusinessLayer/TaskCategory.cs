@@ -52,6 +52,18 @@ namespace PPTMS_BusinessLayer
 
         }
 
+        public static clsTaskCategory Find(string Name)
+        {
+            int UserID = -1 , CategoryID= -1;
+            
+            if (clsTaskCategoriesData.GetCategoryInfoByName(Name, ref CategoryID, ref UserID))
+            {
+                return new clsTaskCategory(CategoryID, UserID, Name);
+            }
+            else
+                return null;
+        }
+
         private bool _AddNewCategory()
         {
             this.CategoryID = clsTaskCategoriesData.AddNewCategory(UserID, Name);
@@ -97,6 +109,12 @@ namespace PPTMS_BusinessLayer
         {
             return clsTaskCategoriesData.GetAllCategories(UserID);
         }
+
+        public static bool IsTaskCategoryExists(string CategoryName , int UserID)
+        {
+            return clsTaskCategoriesData.IsTaskCategoryExists(CategoryName , UserID);
+        }
+
 
     }
 }

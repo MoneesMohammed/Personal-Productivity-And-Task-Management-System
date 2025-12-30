@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TaskAttachmentsData.cs" />
     <Compile Include="TaskCategoriesData.cs" />
     <Compile Include="DataSettings.cs" />
     <Compile Include="PeopleData.cs" />
+    <Compile Include="TaskRemindersData.cs" />
     <Compile Include="TasksData.cs" />
     <Compile Include="UsersData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

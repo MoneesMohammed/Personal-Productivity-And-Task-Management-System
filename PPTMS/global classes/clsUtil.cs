@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PPTMS.Global_Classes
@@ -43,10 +44,19 @@ namespace PPTMS.Global_Classes
 
         }
 
+        public static string AddGUIDToFileName(string sourceFile)
+        {
+            string fileNameWithoutExt = Path.GetFileNameWithoutExtension(sourceFile);
+            string extension = Path.GetExtension(sourceFile);
+            string GUID      = Guid.NewGuid().ToString("N").Substring(0, 8);
+
+            return $"{fileNameWithoutExt}_{GUID}{extension}";
+        }
+
         public static bool CopyImageToProjectImagesFolder(ref string sourceFile)
         {
 
-            string DestinationFolder = @"C:\CIMS-Images\";
+            string DestinationFolder = @"";
 
             if (!CreateFolderIfDoesNotExist(DestinationFolder))
             {
@@ -70,6 +80,37 @@ namespace PPTMS.Global_Classes
             return true;
 
 
+        }
+
+
+        public static bool CopyAttachmentToProjectAttachmentsFolder(int TaskID,ref string sourceFile)
+        {
+
+            string projectPath = Directory.GetParent(Application.StartupPath).Parent.Parent.FullName;
+            
+            string DestinationFolder = Path.Combine(projectPath,"Attachments",$"Task_{TaskID}");
+
+
+            if (!CreateFolderIfDoesNotExist(DestinationFolder))
+            {
+                return false;
+            }
+
+            string destinationFile = Path.Combine(DestinationFolder, AddGUIDToFileName(sourceFile));
+               
+            try
+            {
+                File.Copy(sourceFile, destinationFile, true);
+
+            }
+            catch (IOException iox)
+            {
+                MessageBox.Show(iox.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            sourceFile = destinationFile;
+            return true;
         }
 
 

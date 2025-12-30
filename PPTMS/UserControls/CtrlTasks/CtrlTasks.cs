@@ -131,7 +131,7 @@ namespace PPTMS.UserControls.CtrlTasks
 
             if (result == DialogResult.OK)
             {
-                if (Task.SetStatusArchive())
+                if (Task.MarkAsArchive())
                 {
 
                     MessageBox.Show("Task has been Archived Successfully.", "Archived", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -155,7 +155,7 @@ namespace PPTMS.UserControls.CtrlTasks
 
             if (result == DialogResult.OK)
             {
-                if (Task.SetStatusCompleted())
+                if (Task.MarkAsCompleted())
                 {
                     MessageBox.Show("Task has been Completed Successfully.", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

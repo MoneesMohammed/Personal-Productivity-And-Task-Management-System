@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnHabits = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMain.SuspendLayout();
@@ -233,6 +235,11 @@
             this.panelContent.Size = new System.Drawing.Size(1227, 941);
             this.panelContent.TabIndex = 8;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +272,7 @@
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnHabits;
         private System.Windows.Forms.Panel panelContent;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

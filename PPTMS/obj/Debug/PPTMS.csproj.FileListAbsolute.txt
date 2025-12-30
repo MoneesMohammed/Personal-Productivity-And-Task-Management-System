@@ -22,3 +22,15 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlCategories.CtrlAddEditCategoryInfo.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlCategories.CtrlFullCategories.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlTasks.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlTaskInfo.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlAddEditTaskInfo.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlFullTasks.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlFullTaskInfo.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlUser.CtrlAddEditUserInfo.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlUser.CtrlFullUser.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.CtrlAddEditReminders.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Reminders.CtrlReminders.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Reminders.CtrlFullReminders.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Attachments.CtrlAttachments.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Attachments.CtrlAddEditAttachment.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Attachments.CtrlFullAttachments.resources

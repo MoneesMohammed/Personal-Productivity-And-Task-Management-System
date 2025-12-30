@@ -128,13 +128,20 @@ namespace PPTMS.UserControls.CtrlCategories
 
         private void txtCategoryName_Validating(object sender, CancelEventArgs e)
         {
-            TextBox Tepm = ((TextBox)sender);
+            TextBox Tepm = ((TextBox)sender); 
 
             if (string.IsNullOrEmpty(Tepm.Text.Trim()))
             {
                 e.Cancel = true;
 
                 errorProvider1.SetError(Tepm, "this field is required!");
+
+            }
+            else if (clsTaskCategory.IsTaskCategoryExists(Tepm.Text , clsGlobal.CurrentUser.UserID) && Tepm.Text.Trim() != _TaskCategory.Name.Trim())
+            {
+                
+                e.Cancel = true;
+                errorProvider1.SetError(Tepm, "A category name is already in use, Please use another category name");
 
             }
             else

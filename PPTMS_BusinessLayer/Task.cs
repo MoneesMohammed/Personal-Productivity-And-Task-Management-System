@@ -1,5 +1,6 @@
 ﻿using PPTMS_DataAccessLayar;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace PPTMS_BusinessLayer
                     case enStatus.Pending:
                         return "Pending";
                     case enStatus.InProgress:
-                        return "InProgress";
+                        return "In Progress";
                     case enStatus.Completed:
                         return "Completed";
                     case enStatus.Archived:
@@ -166,9 +167,9 @@ namespace PPTMS_BusinessLayer
             return false;
         }
 
-        public bool SetStatusArchive()
+        public bool MarkAsArchive()
         {
-            return clsTasksData.SetStatusArchive(this.TaskID);
+            return clsTasksData.MarkAsArchive(this.TaskID);
         }
 
         public static DataTable GetAllTasks(int UserID)
@@ -186,16 +187,21 @@ namespace PPTMS_BusinessLayer
             return clsTasksData.SetStatus(this.TaskID, Status);
         }
 
-        public static bool SetStatusCompleted(int TaskID)
+        public static bool MarkAsCompleted(int TaskID)
         {
-            return clsTasksData.SetStatusCompleted(TaskID);
+            return clsTasksData.MarkAsCompleted(TaskID);
         }
 
-        public bool SetStatusCompleted()
+        public bool MarkAsCompleted()
         {
-            return clsTasksData.SetStatusCompleted(this.TaskID);
+            return clsTasksData.MarkAsCompleted(this.TaskID);
         }
 
+
+        public bool IsCompleted()
+        {
+            return this.Status == enStatus.Completed;
+        }
 
 
     }

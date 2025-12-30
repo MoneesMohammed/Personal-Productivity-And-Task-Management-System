@@ -16,6 +16,7 @@ namespace PPTMS.UserControls.CtrlUser
 {
     public partial class CtrlUserDetails : UserControl
     {
+        public Action<int> OnEditUserInfo_LinkClicked;
 
         private clsUser _User;
         private int _UserID = -1;
@@ -81,21 +82,25 @@ namespace PPTMS.UserControls.CtrlUser
             {
                 lblGendor.Text = "Male";
                 lblGendor.Image = Resources.Male;
+                pbUserImage.Image= Resources.working;
             }
             else
             {
                 lblGendor.Text = "Female";
                 lblGendor.Image = Resources.Female;
+                pbUserImage.Image = Resources.attendees;
             }
 
         }
 
         private void llblEditUserInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmAddEditUserInfo frm = new frmAddEditUserInfo(_UserID);
-            frm.ShowDialog();
+            //frmAddEditUserInfo frm = new frmAddEditUserInfo(_UserID);
+            //frm.ShowDialog();
 
-            LoadUserInfo(_UserID);
+            OnEditUserInfo_LinkClicked?.Invoke(_UserID);
+
+            //LoadUserInfo(_UserID);
         }
     }
 }

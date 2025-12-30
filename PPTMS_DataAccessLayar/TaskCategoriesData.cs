@@ -47,6 +47,47 @@ namespace PPTMS_DataAccessLayar
             return isFound;
         }
 
+
+        public static bool GetCategoryInfoByName(string Name , ref int CategoryID, ref int UserID)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+
+            string query = "SELECT * FROM TaskCategories WHERE Name = @Name ;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Name", Name);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+
+                    UserID = reader["UserID"] == DBNull.Value ? -1 : (int)reader["UserID"];
+                    CategoryID = (int)reader["CategoryID"];
+
+                }
+
+                reader.Close();
+            }
+            catch//(Exception e)
+            {
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
+
+
         public static int AddNewCategory(int UserID, string Name)
         {
             int ID = -1;
@@ -166,7 +207,40 @@ namespace PPTMS_DataAccessLayar
 
         }
 
-        
+
+        public static bool IsTaskCategoryExists(string CategoryName , int UserID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = "SELECT Found = 1 FROM TaskCategories WHERE Name = @Name AND UserID IN (null , @UserID);";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Name", CategoryName);
+            command.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch //(Exception ex)
+            {
+                //Console.WriteLine("Error : " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
 
 
     }

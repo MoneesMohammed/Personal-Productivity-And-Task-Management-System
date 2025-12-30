@@ -86,17 +86,89 @@
     <Compile Include="UserControls\CtrlCategories\CtrlFullCategories.Designer.cs">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.Designer.cs">
+      <DependentUpon>CtrlAddEditAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAttachments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAttachments.Designer.cs">
+      <DependentUpon>CtrlAttachments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Attachments\CtrlFullAttachments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Attachments\CtrlFullAttachments.Designer.cs">
+      <DependentUpon>CtrlFullAttachments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlAddEditTaskInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlAddEditTaskInfo.Designer.cs">
+      <DependentUpon>CtrlAddEditTaskInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlFullTaskInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlFullTaskInfo.Designer.cs">
+      <DependentUpon>CtrlFullTaskInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlFullTasks.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlFullTasks.Designer.cs">
+      <DependentUpon>CtrlFullTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Reminders\CtrlAddEditReminders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Reminders\CtrlAddEditReminders.Designer.cs">
+      <DependentUpon>CtrlAddEditReminders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlTaskInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\CtrlTaskInfo.Designer.cs">
+      <DependentUpon>CtrlTaskInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlTasks\CtrlTasks.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\CtrlTasks\CtrlTasks.Designer.cs">
       <DependentUpon>CtrlTasks.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlTasks\Reminders\CtrlFullReminders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Reminders\CtrlFullReminders.Designer.cs">
+      <DependentUpon>CtrlFullReminders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Reminders\CtrlReminders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlTasks\Reminders\CtrlReminders.Designer.cs">
+      <DependentUpon>CtrlReminders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlUser\CtrlAddEditUserInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlUser\CtrlAddEditUserInfo.Designer.cs">
+      <DependentUpon>CtrlAddEditUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlUser\CtrlChangePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\CtrlUser\CtrlChangePassword.Designer.cs">
       <DependentUpon>CtrlChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlUser\CtrlFullUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlUser\CtrlFullUser.Designer.cs">
+      <DependentUpon>CtrlFullUser.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CtrlUser\CtrlUserDetails.cs">
       <SubType>UserControl</SubType>
@@ -130,11 +202,47 @@
     <EmbeddedResource Include="UserControls\CtrlCategories\CtrlFullCategories.resx">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.resx">
+      <DependentUpon>CtrlAddEditAttachment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlAttachments.resx">
+      <DependentUpon>CtrlAttachments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlFullAttachments.resx">
+      <DependentUpon>CtrlFullAttachments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\CtrlAddEditTaskInfo.resx">
+      <DependentUpon>CtrlAddEditTaskInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\CtrlFullTaskInfo.resx">
+      <DependentUpon>CtrlFullTaskInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\CtrlFullTasks.resx">
+      <DependentUpon>CtrlFullTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\Reminders\CtrlAddEditReminders.resx">
+      <DependentUpon>CtrlAddEditReminders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\CtrlTaskInfo.resx">
+      <DependentUpon>CtrlTaskInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlTasks\CtrlTasks.resx">
       <DependentUpon>CtrlTasks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\Reminders\CtrlFullReminders.resx">
+      <DependentUpon>CtrlFullReminders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlTasks\Reminders\CtrlReminders.resx">
+      <DependentUpon>CtrlReminders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlUser\CtrlAddEditUserInfo.resx">
+      <DependentUpon>CtrlAddEditUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlUser\CtrlChangePassword.resx">
       <DependentUpon>CtrlChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlUser\CtrlFullUser.resx">
+      <DependentUpon>CtrlFullUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlUser\CtrlUserDetails.resx">
       <DependentUpon>CtrlUserDetails.cs</DependentUpon>
@@ -166,9 +274,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\task.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Categories.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Habits.png" />
@@ -295,6 +400,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\archive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\priority.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticky-notes %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attachments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attach_file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

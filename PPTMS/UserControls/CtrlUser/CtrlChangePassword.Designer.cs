@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlChangePassword));
             this.gbChangePassword = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.txtCurrentPassword = new System.Windows.Forms.TextBox();
-            this.btnChangePassword = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ctrlUserDetails1 = new PPTMS.UserControls.CtrlUser.CtrlUserDetails();
-            this.lblTitil = new System.Windows.Forms.Label();
-            this.picIcon = new System.Windows.Forms.PictureBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnChangePassword = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblTitil = new System.Windows.Forms.Label();
+            this.picIcon = new System.Windows.Forms.PictureBox();
+            this.ctrlUserDetails1 = new PPTMS.UserControls.CtrlUser.CtrlUserDetails();
             this.gbChangePassword.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picIcon)).BeginInit();
@@ -65,6 +65,21 @@
             this.gbChangePassword.TabStop = false;
             this.gbChangePassword.Text = "Change Password";
             this.gbChangePassword.Visible = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Enabled = false;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = global::PPTMS.Properties.Resources.diskette;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(444, 225);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(140, 43);
+            this.btnSave.TabIndex = 32;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtNewPassword
             // 
@@ -98,70 +113,6 @@
             this.txtCurrentPassword.TabIndex = 29;
             this.txtCurrentPassword.TextChanged += new System.EventHandler(this.AllTextBoxes_TextChanged);
             this.txtCurrentPassword.Validating += new System.ComponentModel.CancelEventHandler(this.AllTextBoxes_Validating);
-            // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnChangePassword.FlatAppearance.BorderSize = 0;
-            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
-            this.btnChangePassword.Location = new System.Drawing.Point(433, 502);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(170, 36);
-            this.btnChangePassword.TabIndex = 2;
-            this.btnChangePassword.Text = "Change Password";
-            this.btnChangePassword.UseVisualStyleBackColor = false;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // ctrlUserDetails1
-            // 
-            this.ctrlUserDetails1.Location = new System.Drawing.Point(3, 101);
-            this.ctrlUserDetails1.Name = "ctrlUserDetails1";
-            this.ctrlUserDetails1.Size = new System.Drawing.Size(610, 395);
-            this.ctrlUserDetails1.TabIndex = 0;
-            // 
-            // lblTitil
-            // 
-            this.lblTitil.AutoSize = true;
-            this.lblTitil.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitil.ForeColor = System.Drawing.Color.Indigo;
-            this.lblTitil.Location = new System.Drawing.Point(285, 32);
-            this.lblTitil.Name = "lblTitil";
-            this.lblTitil.Size = new System.Drawing.Size(206, 42);
-            this.lblTitil.TabIndex = 55;
-            this.lblTitil.Text = "Profile Info";
-            this.lblTitil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitil.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTitil_Paint);
-            // 
-            // picIcon
-            // 
-            this.picIcon.Image = global::PPTMS.Properties.Resources.user;
-            this.picIcon.Location = new System.Drawing.Point(142, -1);
-            this.picIcon.Name = "picIcon";
-            this.picIcon.Size = new System.Drawing.Size(116, 96);
-            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picIcon.TabIndex = 56;
-            this.picIcon.TabStop = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Enabled = false;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = global::PPTMS.Properties.Resources.diskette;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(444, 225);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(140, 43);
-            this.btnSave.TabIndex = 32;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
@@ -199,15 +150,64 @@
             this.label6.Text = "Current Password :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnChangePassword
+            // 
+            this.btnChangePassword.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePassword.ForeColor = System.Drawing.Color.White;
+            this.btnChangePassword.Location = new System.Drawing.Point(433, 502);
+            this.btnChangePassword.Name = "btnChangePassword";
+            this.btnChangePassword.Size = new System.Drawing.Size(170, 36);
+            this.btnChangePassword.TabIndex = 2;
+            this.btnChangePassword.Text = "Change Password";
+            this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // lblTitil
+            // 
+            this.lblTitil.AutoSize = true;
+            this.lblTitil.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitil.ForeColor = System.Drawing.Color.Indigo;
+            this.lblTitil.Location = new System.Drawing.Point(285, 32);
+            this.lblTitil.Name = "lblTitil";
+            this.lblTitil.Size = new System.Drawing.Size(206, 42);
+            this.lblTitil.TabIndex = 55;
+            this.lblTitil.Text = "Profile Info";
+            this.lblTitil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitil.Paint += new System.Windows.Forms.PaintEventHandler(this.lblTitil_Paint);
+            // 
+            // picIcon
+            // 
+            this.picIcon.Image = global::PPTMS.Properties.Resources.user;
+            this.picIcon.Location = new System.Drawing.Point(142, -1);
+            this.picIcon.Name = "picIcon";
+            this.picIcon.Size = new System.Drawing.Size(116, 96);
+            this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picIcon.TabIndex = 56;
+            this.picIcon.TabStop = false;
+            // 
+            // ctrlUserDetails1
+            // 
+            this.ctrlUserDetails1.Location = new System.Drawing.Point(3, 101);
+            this.ctrlUserDetails1.Name = "ctrlUserDetails1";
+            this.ctrlUserDetails1.Size = new System.Drawing.Size(610, 393);
+            this.ctrlUserDetails1.TabIndex = 57;
+            // 
             // CtrlChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ctrlUserDetails1);
             this.Controls.Add(this.picIcon);
             this.Controls.Add(this.lblTitil);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.gbChangePassword);
-            this.Controls.Add(this.ctrlUserDetails1);
             this.Name = "CtrlChangePassword";
             this.Size = new System.Drawing.Size(616, 868);
             this.gbChangePassword.ResumeLayout(false);
@@ -220,8 +220,6 @@
         }
 
         #endregion
-
-        private CtrlUserDetails ctrlUserDetails1;
         private System.Windows.Forms.GroupBox gbChangePassword;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.TextBox txtNewPassword;
@@ -234,5 +232,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox picIcon;
         private System.Windows.Forms.Label lblTitil;
+        private CtrlUserDetails ctrlUserDetails1;
     }
 }
