@@ -68,36 +68,55 @@ namespace PPTMS.UserControls.CtrlTasks
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
+            if (dgvTasks.CurrentRow == null)
+            {
+                e.Cancel = true;
+                return;
+            }
+
             int TaskID = (int)dgvTasks.CurrentRow.Cells[0].Value;
             clsTask Task = clsTask.Find(TaskID);
 
-            if (Task.Status == clsTask.enStatus.Completed)
-            {
-                tsmArchiveTask.Enabled     = false;
-                tsmMarkAsCompleted.Enabled = false;
-                tsmEdit.Enabled            = false;
-                tsmReminders.Enabled       = false;
-                
-            }
-            else if(Task.Status == clsTask.enStatus.Archived)
-            {
-                tsmEdit.Enabled            = false;
-                tsmReminders.Enabled       = false;
-                tsmAttachments.Enabled     = false;
-                tsmArchiveTask.Enabled     = false;
-                tsmMarkAsCompleted.Enabled = false;
+            DisableAllMenuItems();
 
-            }
-            else
+
+            switch (Task.Status)
             {
-                tsmArchiveTask.Enabled = true;
-                tsmMarkAsCompleted.Enabled = true;
-                tsmEdit.Enabled = true;
-                tsmReminders.Enabled = true;
-                tsmAttachments.Enabled = true;
+                case clsTask.enStatus.New:
+                case clsTask.enStatus.InProgress:
+                case clsTask.enStatus.OnHold:
+
+                    tsmEdit.Enabled = true;
+                    tsmReminders.Enabled = true;
+                    tsmAttachments.Enabled = true;
+                    tsmMarkAsCompleted.Enabled = true;
+                    tsmArchiveTask.Enabled = true;
+
+                    tsmInProgressTask.Enabled = Task.Status != clsTask.enStatus.InProgress;
+                    tsmOnHoldTask.Enabled = Task.Status != clsTask.enStatus.OnHold;
+                    break;
+
+                case clsTask.enStatus.Completed:
+                    tsmArchiveTask.Enabled = true;// مسموح فقط الأرشفة
+                    tsmAttachments.Enabled = true;
+                    break;
+
+                case clsTask.enStatus.Archived:
+                    // لا شيء مسموح
+                    break;
             }
 
-            
+        }
+
+        private void DisableAllMenuItems()
+        {
+            tsmEdit.Enabled = false;
+            tsmReminders.Enabled = false;
+            tsmAttachments.Enabled = false;
+            tsmMarkAsCompleted.Enabled = false;
+            tsmArchiveTask.Enabled = false;
+            tsmInProgressTask.Enabled = false;
+            tsmOnHoldTask.Enabled = false;
         }
 
         private void tsmShowDetails_Click(object sender, EventArgs e)
@@ -131,7 +150,7 @@ namespace PPTMS.UserControls.CtrlTasks
 
             if (result == DialogResult.OK)
             {
-                if (Task.MarkAsArchive())
+                if (Task.MarkAsArchived())
                 {
 
                     MessageBox.Show("Task has been Archived Successfully.", "Archived", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -192,10 +211,11 @@ namespace PPTMS.UserControls.CtrlTasks
             cbFilter.Items.Clear();
 
             cbFilter.Items.Add("All");
-            cbFilter.Items.Add("Pending");
+            cbFilter.Items.Add("New");
             cbFilter.Items.Add("In Progress");
             cbFilter.Items.Add("Completed");
             cbFilter.Items.Add("Archived");
+            cbFilter.Items.Add("On Hold");
 
         }
 
@@ -301,6 +321,50 @@ namespace PPTMS.UserControls.CtrlTasks
                 }
 
             }
+        }
+
+        private void tsmInProgressTask_Click(object sender, EventArgs e)
+        {
+            clsTask Task = clsTask.Find((int)dgvTasks.CurrentRow.Cells[0].Value);
+
+            var result = MessageBox.Show($"Are you sure you want to In Progress the Task \nby TaskID: {Task.TaskID}", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                if (Task.MarkAsInProgress())
+                {
+                    MessageBox.Show("Task has been In Progress Successfully.", "In Progress", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Task was not In Progress because it has data linked to it.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+            RefreshTasksList();
+        }
+
+        private void tsmOnHoldTask_Click(object sender, EventArgs e)
+        {
+            clsTask Task = clsTask.Find((int)dgvTasks.CurrentRow.Cells[0].Value);
+
+            var result = MessageBox.Show($"Are you sure you want to On Hold the Task \nby TaskID: {Task.TaskID}", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+                if (Task.MarkAsOnHold())
+                {
+                    MessageBox.Show("Task has been On Hold Successfully.", "On Hold", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Task was not On Hold because it has data linked to it.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+            RefreshTasksList();
         }
     }
 

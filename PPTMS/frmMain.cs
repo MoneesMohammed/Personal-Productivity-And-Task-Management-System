@@ -27,10 +27,6 @@ namespace PPTMS
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            notifyIcon1.Visible = true;
-            notifyIcon1.Icon = SystemIcons.Application;
-            notifyIcon1.Text = "Task Reminder";
-
             reminderTimer.Interval = 10 * 1000; // كل دقيقة
             reminderTimer.Tick += ReminderTimer_Tick;
             reminderTimer.Start();
@@ -72,6 +68,13 @@ namespace PPTMS
             notifyIcon1.ShowBalloonTip(3000);
         }
 
+        private void tsmOpen_Click(object sender, EventArgs e)
+        {
+            this.Focus();
+        }
+
+
+
 
 
         private void panelSidebar_Paint(object sender, PaintEventArgs e)
@@ -105,10 +108,6 @@ namespace PPTMS
             btn.BackColor = Color.Transparent;
         }
 
-        private void frmMain_SizeChanged(object sender, EventArgs e)
-        {
-            
-        }
 
        
         private void btnProfile_Click(object sender, EventArgs e)
@@ -157,5 +156,7 @@ namespace PPTMS
             CtrlFullTasks ctrlTasks = new CtrlFullTasks();
             LoadCenteredControl(ctrlTasks);
         }
+
+        
     }
 }

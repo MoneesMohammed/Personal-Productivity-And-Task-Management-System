@@ -45,6 +45,7 @@
     <Compile Include="TaskCategoriesData.cs" />
     <Compile Include="DataSettings.cs" />
     <Compile Include="PeopleData.cs" />
+    <Compile Include="TaskLogsData.cs" />
     <Compile Include="TaskRemindersData.cs" />
     <Compile Include="TasksData.cs" />
     <Compile Include="UsersData.cs" />

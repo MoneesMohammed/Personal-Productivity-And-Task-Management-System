@@ -105,12 +105,12 @@ namespace PPTMS_DataAccessLayar
             return ID;
         }
 
-        public static bool UpdateTask(int TaskID, int CategoryID, string Title, string Description,byte Status,
+        public static bool UpdateTask(int TaskID, int CategoryID, string Title, string Description,
                                        byte Priority, DateTime DueDate, int EstimatedMinutes)
         {
             int RowAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
-            string query = "UPDATE Tasks SET  CategoryID=@CategoryID , Title=@Title , Description=@Description , Status=@Status , Priority=@Priority , DueDate=@DueDate , EstimatedMinutes=@EstimatedMinutes   " +
+            string query = "UPDATE Tasks SET  CategoryID=@CategoryID , Title=@Title , Description=@Description ,Priority=@Priority , DueDate=@DueDate , EstimatedMinutes=@EstimatedMinutes   " +
                            "WHERE TaskID = @TaskID;";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -118,7 +118,6 @@ namespace PPTMS_DataAccessLayar
             command.Parameters.AddWithValue("@TaskID", TaskID);
             command.Parameters.AddWithValue("@CategoryID", CategoryID);
             command.Parameters.AddWithValue("@Title", Title);
-            command.Parameters.AddWithValue("@Status", Status);
             command.Parameters.AddWithValue("@Priority", Priority);
             command.Parameters.AddWithValue("@DueDate", DueDate);
             command.Parameters.AddWithValue("@EstimatedMinutes", EstimatedMinutes);

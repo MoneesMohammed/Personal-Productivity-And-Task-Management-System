@@ -45,6 +45,7 @@
     <Compile Include="TaskAttachment.cs" />
     <Compile Include="TaskCategory.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="TaskLog.cs" />
     <Compile Include="TaskReminder.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -38,22 +38,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTasks = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmReminders = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAttachments = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmArchiveTask = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmMarkAsCompleted = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmAddNewTask = new System.Windows.Forms.ToolStripMenuItem();
-            this.pBox1 = new System.Windows.Forms.PictureBox();
-            this.butAddNewTask = new System.Windows.Forms.Button();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.txtFilterBy = new System.Windows.Forms.TextBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pBox1 = new System.Windows.Forms.PictureBox();
+            this.butAddNewTask = new System.Windows.Forms.Button();
+            this.tsmShowDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReminders = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAttachments = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmInProgressTask = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmOnHoldTask = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmArchiveTask = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmMarkAsCompleted = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAddNewTask = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
@@ -155,107 +157,30 @@
             this.tsmReminders,
             this.tsmAttachments,
             this.toolStripSeparator3,
+            this.tsmInProgressTask,
+            this.tsmOnHoldTask,
             this.tsmArchiveTask,
             this.tsmMarkAsCompleted,
             this.toolStripSeparator2,
             this.tsmAddNewTask});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(272, 366);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(272, 458);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
-            // 
-            // tsmShowDetails
-            // 
-            this.tsmShowDetails.Image = global::PPTMS.Properties.Resources.list;
-            this.tsmShowDetails.Name = "tsmShowDetails";
-            this.tsmShowDetails.Size = new System.Drawing.Size(271, 46);
-            this.tsmShowDetails.Text = "Show Details";
-            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
-            // 
-            // tsmEdit
-            // 
-            this.tsmEdit.Image = global::PPTMS.Properties.Resources.clipboard;
-            this.tsmEdit.Name = "tsmEdit";
-            this.tsmEdit.Size = new System.Drawing.Size(271, 46);
-            this.tsmEdit.Text = "Edit";
-            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
             // 
-            // tsmReminders
-            // 
-            this.tsmReminders.Image = global::PPTMS.Properties.Resources.reminder;
-            this.tsmReminders.Name = "tsmReminders";
-            this.tsmReminders.Size = new System.Drawing.Size(271, 46);
-            this.tsmReminders.Text = "Reminders";
-            this.tsmReminders.Click += new System.EventHandler(this.tsmReminders_Click);
-            // 
-            // tsmAttachments
-            // 
-            this.tsmAttachments.Image = global::PPTMS.Properties.Resources.attached;
-            this.tsmAttachments.Name = "tsmAttachments";
-            this.tsmAttachments.Size = new System.Drawing.Size(271, 46);
-            this.tsmAttachments.Text = "Attachments";
-            this.tsmAttachments.Click += new System.EventHandler(this.tsmAttachments_Click);
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(268, 6);
             // 
-            // tsmArchiveTask
-            // 
-            this.tsmArchiveTask.Image = global::PPTMS.Properties.Resources.archive;
-            this.tsmArchiveTask.Name = "tsmArchiveTask";
-            this.tsmArchiveTask.Size = new System.Drawing.Size(271, 46);
-            this.tsmArchiveTask.Text = "Archive Task";
-            this.tsmArchiveTask.Click += new System.EventHandler(this.tsmArchiveTask_Click);
-            // 
-            // tsmMarkAsCompleted
-            // 
-            this.tsmMarkAsCompleted.Image = global::PPTMS.Properties.Resources.test1;
-            this.tsmMarkAsCompleted.Name = "tsmMarkAsCompleted";
-            this.tsmMarkAsCompleted.Size = new System.Drawing.Size(271, 46);
-            this.tsmMarkAsCompleted.Text = "Mark as Completed";
-            this.tsmMarkAsCompleted.Click += new System.EventHandler(this.tsmMarkAsCompleted_Click);
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(268, 6);
-            // 
-            // tsmAddNewTask
-            // 
-            this.tsmAddNewTask.Image = global::PPTMS.Properties.Resources.tab;
-            this.tsmAddNewTask.Name = "tsmAddNewTask";
-            this.tsmAddNewTask.Size = new System.Drawing.Size(271, 46);
-            this.tsmAddNewTask.Text = "Add New Task";
-            this.tsmAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
-            // 
-            // pBox1
-            // 
-            this.pBox1.Image = global::PPTMS.Properties.Resources.task1;
-            this.pBox1.Location = new System.Drawing.Point(443, 0);
-            this.pBox1.Name = "pBox1";
-            this.pBox1.Size = new System.Drawing.Size(116, 96);
-            this.pBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBox1.TabIndex = 60;
-            this.pBox1.TabStop = false;
-            // 
-            // butAddNewTask
-            // 
-            this.butAddNewTask.BackColor = System.Drawing.Color.Transparent;
-            this.butAddNewTask.FlatAppearance.BorderSize = 0;
-            this.butAddNewTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butAddNewTask.Image = global::PPTMS.Properties.Resources.tab;
-            this.butAddNewTask.Location = new System.Drawing.Point(1068, 28);
-            this.butAddNewTask.Name = "butAddNewTask";
-            this.butAddNewTask.Size = new System.Drawing.Size(73, 75);
-            this.butAddNewTask.TabIndex = 59;
-            this.butAddNewTask.UseVisualStyleBackColor = false;
-            this.butAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
             // 
             // cbFilter
             // 
@@ -310,6 +235,101 @@
             this.label3.TabIndex = 65;
             this.label3.Text = "Filter By :";
             // 
+            // pBox1
+            // 
+            this.pBox1.Image = global::PPTMS.Properties.Resources.task1;
+            this.pBox1.Location = new System.Drawing.Point(443, 0);
+            this.pBox1.Name = "pBox1";
+            this.pBox1.Size = new System.Drawing.Size(116, 96);
+            this.pBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBox1.TabIndex = 60;
+            this.pBox1.TabStop = false;
+            // 
+            // butAddNewTask
+            // 
+            this.butAddNewTask.BackColor = System.Drawing.Color.Transparent;
+            this.butAddNewTask.FlatAppearance.BorderSize = 0;
+            this.butAddNewTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.butAddNewTask.Image = global::PPTMS.Properties.Resources.tab;
+            this.butAddNewTask.Location = new System.Drawing.Point(1068, 28);
+            this.butAddNewTask.Name = "butAddNewTask";
+            this.butAddNewTask.Size = new System.Drawing.Size(73, 75);
+            this.butAddNewTask.TabIndex = 59;
+            this.butAddNewTask.UseVisualStyleBackColor = false;
+            this.butAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
+            // 
+            // tsmShowDetails
+            // 
+            this.tsmShowDetails.Image = global::PPTMS.Properties.Resources.list;
+            this.tsmShowDetails.Name = "tsmShowDetails";
+            this.tsmShowDetails.Size = new System.Drawing.Size(271, 46);
+            this.tsmShowDetails.Text = "Show Details";
+            this.tsmShowDetails.Click += new System.EventHandler(this.tsmShowDetails_Click);
+            // 
+            // tsmEdit
+            // 
+            this.tsmEdit.Image = global::PPTMS.Properties.Resources.clipboard;
+            this.tsmEdit.Name = "tsmEdit";
+            this.tsmEdit.Size = new System.Drawing.Size(271, 46);
+            this.tsmEdit.Text = "Edit";
+            this.tsmEdit.Click += new System.EventHandler(this.tsmEdit_Click);
+            // 
+            // tsmReminders
+            // 
+            this.tsmReminders.Image = global::PPTMS.Properties.Resources.reminder;
+            this.tsmReminders.Name = "tsmReminders";
+            this.tsmReminders.Size = new System.Drawing.Size(271, 46);
+            this.tsmReminders.Text = "Reminders";
+            this.tsmReminders.Click += new System.EventHandler(this.tsmReminders_Click);
+            // 
+            // tsmAttachments
+            // 
+            this.tsmAttachments.Image = global::PPTMS.Properties.Resources.attached;
+            this.tsmAttachments.Name = "tsmAttachments";
+            this.tsmAttachments.Size = new System.Drawing.Size(271, 46);
+            this.tsmAttachments.Text = "Attachments";
+            this.tsmAttachments.Click += new System.EventHandler(this.tsmAttachments_Click);
+            // 
+            // tsmInProgressTask
+            // 
+            this.tsmInProgressTask.Image = global::PPTMS.Properties.Resources.settings;
+            this.tsmInProgressTask.Name = "tsmInProgressTask";
+            this.tsmInProgressTask.Size = new System.Drawing.Size(271, 46);
+            this.tsmInProgressTask.Text = "In Progress Task";
+            this.tsmInProgressTask.Click += new System.EventHandler(this.tsmInProgressTask_Click);
+            // 
+            // tsmOnHoldTask
+            // 
+            this.tsmOnHoldTask.Image = global::PPTMS.Properties.Resources.stop;
+            this.tsmOnHoldTask.Name = "tsmOnHoldTask";
+            this.tsmOnHoldTask.Size = new System.Drawing.Size(271, 46);
+            this.tsmOnHoldTask.Text = "On Hold Task";
+            this.tsmOnHoldTask.Click += new System.EventHandler(this.tsmOnHoldTask_Click);
+            // 
+            // tsmArchiveTask
+            // 
+            this.tsmArchiveTask.Image = global::PPTMS.Properties.Resources.archive;
+            this.tsmArchiveTask.Name = "tsmArchiveTask";
+            this.tsmArchiveTask.Size = new System.Drawing.Size(271, 46);
+            this.tsmArchiveTask.Text = "Archive Task";
+            this.tsmArchiveTask.Click += new System.EventHandler(this.tsmArchiveTask_Click);
+            // 
+            // tsmMarkAsCompleted
+            // 
+            this.tsmMarkAsCompleted.Image = global::PPTMS.Properties.Resources.test1;
+            this.tsmMarkAsCompleted.Name = "tsmMarkAsCompleted";
+            this.tsmMarkAsCompleted.Size = new System.Drawing.Size(271, 46);
+            this.tsmMarkAsCompleted.Text = "Mark as Completed";
+            this.tsmMarkAsCompleted.Click += new System.EventHandler(this.tsmMarkAsCompleted_Click);
+            // 
+            // tsmAddNewTask
+            // 
+            this.tsmAddNewTask.Image = global::PPTMS.Properties.Resources.tab;
+            this.tsmAddNewTask.Name = "tsmAddNewTask";
+            this.tsmAddNewTask.Size = new System.Drawing.Size(271, 46);
+            this.tsmAddNewTask.Text = "Add New Task";
+            this.tsmAddNewTask.Click += new System.EventHandler(this.AddNewTask_Click);
+            // 
             // CtrlTasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,5 +380,7 @@
         private System.Windows.Forms.TextBox txtFilterBy;
         private System.Windows.Forms.ComboBox cbFilterBy;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem tsmInProgressTask;
+        private System.Windows.Forms.ToolStripMenuItem tsmOnHoldTask;
     }
 }

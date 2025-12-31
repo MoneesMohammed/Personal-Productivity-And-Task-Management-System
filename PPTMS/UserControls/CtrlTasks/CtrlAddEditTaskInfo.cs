@@ -103,6 +103,9 @@ namespace PPTMS.UserControls.CtrlTasks
                 return;
             }
 
+            dtpDueDate.MinDate = _Task.DueDate;
+            dtpDueDate.Value = _Task.DueDate;
+
             lblTaskID.Text = _Task.TaskID.ToString();
 
             cbCategory.SelectedIndex = cbCategory.FindString(clsTaskCategory.Find(_Task.CategoryID).Name);
@@ -128,7 +131,7 @@ namespace PPTMS.UserControls.CtrlTasks
             _Task.CategoryID = CategoryID;
             _Task.Title = txtTitle.Text;
             _Task.Description = txtDescription.Text;
-            _Task.Status = clsTask.enStatus.InProgress;
+            _Task.Status = clsTask.enStatus.New;
             _Task.Priority = (clsTask.enPriority)cbPriority.SelectedIndex;
             _Task.DueDate = dtpDueDate.Value;
             _Task.EstimatedMinutes = int.Parse(txtEstimatedMinutes.Text);

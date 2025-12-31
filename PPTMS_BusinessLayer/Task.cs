@@ -14,7 +14,7 @@ namespace PPTMS_BusinessLayer
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode Mode = enMode.AddNew;
 
-        public enum enStatus { Pending = 0, InProgress = 1, Completed = 2, Archived = 3 };
+        public enum enStatus { New = 0, InProgress = 1, Completed = 2, Archived = 3 , OnHold = 4 };
         public enum enPriority { Low = 0, Medium = 1, High = 2, Critical = 3 };
 
 
@@ -37,14 +37,16 @@ namespace PPTMS_BusinessLayer
             {
                 switch (Status)
                 {
-                    case enStatus.Pending:
-                        return "Pending";
+                    case enStatus.New:
+                        return "New";
                     case enStatus.InProgress:
                         return "In Progress";
                     case enStatus.Completed:
                         return "Completed";
                     case enStatus.Archived:
                         return "Archived";
+                    case enStatus.OnHold:
+                        return "On Hold";
                     default:
                         return "Unknown";
 
@@ -98,7 +100,7 @@ namespace PPTMS_BusinessLayer
         private clsTask(int TaskID, int UserID, int CategoryID, string Title, string Description,enStatus Status,enPriority Priority,
                         DateTime DueDate, int EstimatedMinutes, DateTime CompletedDate, DateTime CreateDate)
         {
-            this.TaskID              = TaskID;
+            this.TaskID              = TaskID            ;
             this.UserID              = UserID            ;
             this.CategoryID          = CategoryID        ;
             this.Title               = Title             ;
@@ -138,8 +140,74 @@ namespace PPTMS_BusinessLayer
 
         private bool _UpdateTask()
         {
-            return clsTasksData.UpdateTask(this.TaskID, CategoryID, Title, Description, (byte)Status, (byte)Priority, DueDate, EstimatedMinutes);
+            return clsTasksData.UpdateTask(this.TaskID, CategoryID, Title, Description, (byte)Priority, DueDate, EstimatedMinutes);
         }
+
+        private bool _TaskLogTaskCreated()
+        {
+            clsTaskLog TaskLog = new clsTaskLog();
+
+            TaskLog.TaskID = this.TaskID;
+            TaskLog.Action = clsTaskLog.enAction.Created;
+            TaskLog.OldValue = "";
+            TaskLog.NewValue = "Created";
+            TaskLog.ActionDate = DateTime.Now;
+
+            return TaskLog.Save();
+        }
+
+
+        private bool _LogTaskEdits()
+        {
+            clsTask oldTask = clsTask.Find(this.TaskID);
+
+            List<clsTaskLog> logs = new List<clsTaskLog>();
+
+            if (this.DueDate.Date != oldTask.DueDate.Date)
+            {
+                logs.Add(new clsTaskLog
+                {
+                    Action = clsTaskLog.enAction.DueDateChanged,
+                    OldValue = oldTask.DueDate.ToShortDateString(),
+                    NewValue = this.DueDate.ToShortDateString()
+                });
+            }
+
+            if (this.Priority != oldTask.Priority)
+            {
+                logs.Add(new clsTaskLog
+                {
+                    Action = clsTaskLog.enAction.PriorityChanged,
+                    OldValue = oldTask.PriorityText,
+                    NewValue = this.PriorityText
+                });
+            }
+
+            
+            if (logs.Count == 0)
+            {
+                logs.Add(new clsTaskLog
+                {
+                    Action = clsTaskLog.enAction.Edited,
+                    OldValue = "",
+                    NewValue = "Task Updated"
+                });
+            }
+
+            
+            foreach (var log in logs)
+            {
+                log.TaskID = this.TaskID;
+                log.ActionDate = DateTime.Now;
+
+                if (!log.Save())
+                    return false;
+            }
+
+            return true;
+
+        }
+
 
         public bool Save()
         {
@@ -149,8 +217,9 @@ namespace PPTMS_BusinessLayer
 
                     if (_AddNewTask())
                     {
+                        
                         Mode = enMode.Update;
-                        return true;
+                        return _TaskLogTaskCreated();
                     }
                     else
                     {
@@ -160,16 +229,43 @@ namespace PPTMS_BusinessLayer
 
                 case enMode.Update:
 
-                    return (_UpdateTask());
+                    if (_LogTaskEdits())
+                    { 
+                         return _UpdateTask();
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
+
 
             }
 
             return false;
         }
 
-        public bool MarkAsArchive()
+        public bool MarkAsArchived()
         {
-            return clsTasksData.MarkAsArchive(this.TaskID);
+            if(this.TaskID == -1)
+                return false;
+
+            clsTaskLog TaskLog = new clsTaskLog();
+
+            TaskLog.TaskID = this.TaskID;
+            TaskLog.Action = clsTaskLog.enAction.Archived;
+            TaskLog.OldValue = this.StatusText;
+            TaskLog.NewValue = "Archived";
+            TaskLog.ActionDate = DateTime.Now;
+
+            if (TaskLog.Save())
+            {
+                return clsTasksData.MarkAsArchive(this.TaskID);
+            }
+
+            return false;
+
         }
 
         public static DataTable GetAllTasks(int UserID)
@@ -177,24 +273,74 @@ namespace PPTMS_BusinessLayer
             return clsTasksData.GetAllTasks(UserID);
         }
 
-        public static bool SetStatus(int TaskID , byte Status)
+       
+
+        public bool MarkAsInProgress()
         {
-            return clsTasksData.SetStatus(TaskID, Status);
+            if (this.TaskID == -1)
+                return false;
+
+            clsTaskLog TaskLog = new clsTaskLog();
+
+            TaskLog.TaskID = this.TaskID;
+            TaskLog.Action = clsTaskLog.enAction.StatusChanged;
+            TaskLog.OldValue = this.StatusText;
+            TaskLog.NewValue = "In Progress";
+            TaskLog.ActionDate = DateTime.Now;
+
+            if (TaskLog.Save())
+            {
+                return clsTasksData.SetStatus(this.TaskID, (byte)clsTask.enStatus.InProgress);
+            }
+
+            return false;
+
         }
 
-        public bool SetStatus(byte Status)
+        public bool MarkAsOnHold()
         {
-            return clsTasksData.SetStatus(this.TaskID, Status);
+            if (this.TaskID == -1)
+                return false;
+
+            clsTaskLog TaskLog = new clsTaskLog();
+
+            TaskLog.TaskID = this.TaskID;
+            TaskLog.Action = clsTaskLog.enAction.StatusChanged;
+            TaskLog.OldValue = this.StatusText;
+            TaskLog.NewValue = "On Hold";
+            TaskLog.ActionDate = DateTime.Now;
+
+            if (TaskLog.Save())
+            {
+                return clsTasksData.SetStatus(this.TaskID, (byte)clsTask.enStatus.OnHold);
+            }
+
+            return false;
+
         }
 
-        public static bool MarkAsCompleted(int TaskID)
-        {
-            return clsTasksData.MarkAsCompleted(TaskID);
-        }
+
 
         public bool MarkAsCompleted()
         {
-            return clsTasksData.MarkAsCompleted(this.TaskID);
+            if (this.TaskID == -1)
+                return false;
+
+            clsTaskLog TaskLog = new clsTaskLog();
+
+            TaskLog.TaskID = this.TaskID;
+            TaskLog.Action = clsTaskLog.enAction.Completed;
+            TaskLog.OldValue = this.StatusText;
+            TaskLog.NewValue = "Completed";
+            TaskLog.ActionDate = DateTime.Now;
+
+            if (TaskLog.Save())
+            {
+                return clsTasksData.MarkAsCompleted(this.TaskID);
+            }
+
+            return false;
+
         }
 
 
