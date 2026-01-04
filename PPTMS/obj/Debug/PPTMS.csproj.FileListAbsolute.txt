@@ -34,3 +34,4 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Attachments.CtrlAttachments.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Attachments.CtrlAddEditAttachment.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlTasks.Attachments.CtrlFullAttachments.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlHabit.CtrlHabits.resources

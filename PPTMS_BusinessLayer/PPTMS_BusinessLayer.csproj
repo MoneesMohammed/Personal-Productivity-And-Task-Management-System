@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Habit.cs" />
+    <Compile Include="HabitLog.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="TaskAttachment.cs" />
     <Compile Include="TaskCategory.cs" />

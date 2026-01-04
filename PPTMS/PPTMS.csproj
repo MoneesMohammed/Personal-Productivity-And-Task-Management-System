@@ -86,6 +86,12 @@
     <Compile Include="UserControls\CtrlCategories\CtrlFullCategories.Designer.cs">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlHabit\CtrlHabits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\CtrlHabits.Designer.cs">
+      <DependentUpon>CtrlHabits.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlCategories\CtrlFullCategories.resx">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHabit\CtrlHabits.resx">
+      <DependentUpon>CtrlHabits.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.resx">
       <DependentUpon>CtrlAddEditAttachment.cs</DependentUpon>
@@ -472,6 +481,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mental-health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daily-tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mental-health %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch-on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

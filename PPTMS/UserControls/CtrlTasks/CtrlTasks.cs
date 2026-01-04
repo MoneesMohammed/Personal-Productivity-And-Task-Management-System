@@ -33,6 +33,9 @@ namespace PPTMS.UserControls.CtrlTasks
         {
             _dtTasks = clsTask.GetAllTasks(clsGlobal.CurrentUser.UserID);
 
+            if (_dtTasks.Rows.Count > 0)
+                _dtTasks.DefaultView.RowFilter = string.Format("[Status] NOT = 'Archived'");
+
             dgvTasks.DataSource = _dtTasks;
 
             lblRecodes.Text = dgvTasks.Rows.Count.ToString();
@@ -97,12 +100,12 @@ namespace PPTMS.UserControls.CtrlTasks
                     break;
 
                 case clsTask.enStatus.Completed:
-                    tsmArchiveTask.Enabled = true;// مسموح فقط الأرشفة
+                    tsmArchiveTask.Enabled = true;
                     tsmAttachments.Enabled = true;
                     break;
 
                 case clsTask.enStatus.Archived:
-                    // لا شيء مسموح
+                    
                     break;
             }
 
@@ -295,7 +298,7 @@ namespace PPTMS.UserControls.CtrlTasks
         {
             string FilterColumn = cbFilterBy.Text;
 
-            if (txtFilterBy.Text.Trim() == "" || FilterColumn == "None" || FilterColumn == "Is Active")
+            if (txtFilterBy.Text.Trim() == "" || FilterColumn == "None" || FilterColumn == "Category")
             {
                 _dtTasks.DefaultView.RowFilter = "";
                 lblRecodes.Text = _dtTasks.Rows.Count.ToString();

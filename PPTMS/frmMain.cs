@@ -1,5 +1,6 @@
 ﻿using PPTMS.Global_Classes;
 using PPTMS.UserControls.CtrlCategories;
+using PPTMS.UserControls.CtrlHabit;
 using PPTMS.UserControls.CtrlTasks;
 using PPTMS.UserControls.CtrlUser;
 using PPTMS_BusinessLayer;
@@ -157,6 +158,13 @@ namespace PPTMS
             LoadCenteredControl(ctrlTasks);
         }
 
-        
+        int CoutOpenHabits = 0;
+
+        private void btnHabits_Click(object sender, EventArgs e)
+        {
+            CoutOpenHabits++;
+            CtrlHabits ctrlHabits = new CtrlHabits();
+            LoadCenteredControl(ctrlHabits);
+        }
     }
 }

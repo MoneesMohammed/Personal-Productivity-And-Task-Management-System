@@ -57,7 +57,7 @@ namespace PPTMS_BusinessLayer
         {
             LogID = -1;
             TaskID = -1;
-            Action = 0;
+            Action = enAction.Created;
             OldValue = "";
             NewValue = "";
             ActionDate = DateTime.Now;

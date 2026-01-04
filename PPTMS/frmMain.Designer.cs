@@ -107,6 +107,7 @@
             this.btnHabits.TabIndex = 16;
             this.btnHabits.Text = "Habits";
             this.btnHabits.UseVisualStyleBackColor = false;
+            this.btnHabits.Click += new System.EventHandler(this.btnHabits_Click);
             this.btnHabits.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnHabits.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 

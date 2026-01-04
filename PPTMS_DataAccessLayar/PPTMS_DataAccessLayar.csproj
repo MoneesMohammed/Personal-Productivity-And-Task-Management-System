@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HabitLogsData.cs" />
+    <Compile Include="HabitsData.cs" />
     <Compile Include="TaskAttachmentsData.cs" />
     <Compile Include="TaskCategoriesData.cs" />
     <Compile Include="DataSettings.cs" />
