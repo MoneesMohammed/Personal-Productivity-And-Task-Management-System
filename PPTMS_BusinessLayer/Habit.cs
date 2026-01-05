@@ -91,7 +91,7 @@ namespace PPTMS_BusinessLayer
 
         private bool _AddNewHabit()
         {
-            this.HabitID = clsHabitsData.AddNewHabit(UserID, Name , (byte)Frequency, IsActive,IsArchived, CreateDate);
+            this.HabitID = clsHabitsData.AddNewHabit(UserID, Name , (byte)Frequency, CreateDate);
             return (HabitID != -1);
         }
 

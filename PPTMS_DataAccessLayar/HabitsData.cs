@@ -53,11 +53,11 @@ namespace PPTMS_DataAccessLayar
             return isFound;
         }
 
-        public static int AddNewHabit(int UserID, string Name, byte Frequency, bool IsActive, bool IsArchived, DateTime CreateDate)
+        public static int AddNewHabit(int UserID, string Name, byte Frequency, DateTime CreateDate)
         {
             int ID = -1;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
-            string query = "INSERT INTO Habits VALUES (@UserID , @Name , @Frequency ,@IsActive,@IsArchived, @CreateDate );" +
+            string query = "INSERT INTO Habits VALUES (@UserID , @Name , @Frequency , 1 , 0 , @CreateDate );" +
                            "SELECT SCOPE_IDENTITY()";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -65,8 +65,6 @@ namespace PPTMS_DataAccessLayar
             command.Parameters.AddWithValue("@UserID"     , UserID     );
             command.Parameters.AddWithValue("@Name"       , Name       );
             command.Parameters.AddWithValue("@Frequency"  , Frequency  );
-            command.Parameters.AddWithValue("@IsActive"   , IsActive   );
-            command.Parameters.AddWithValue("@IsArchived" , IsArchived );
             command.Parameters.AddWithValue("@CreateDate" , CreateDate );
 
             try

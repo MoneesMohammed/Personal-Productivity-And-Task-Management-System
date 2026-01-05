@@ -86,11 +86,35 @@
     <Compile Include="UserControls\CtrlCategories\CtrlFullCategories.Designer.cs">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlHabit\Add Edit Habit\CtrlAddEditHabit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\Add Edit Habit\CtrlAddEditHabit.Designer.cs">
+      <DependentUpon>CtrlAddEditHabit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\CtrlFullHabits.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\CtrlFullHabits.Designer.cs">
+      <DependentUpon>CtrlFullHabits.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlHabit\CtrlHabits.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\CtrlHabit\CtrlHabits.Designer.cs">
       <DependentUpon>CtrlHabits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\Habit Info\CtrlFullHabitInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\Habit Info\CtrlFullHabitInfo.Designer.cs">
+      <DependentUpon>CtrlFullHabitInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\Habit Info\CtrlHabitInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\Habit Info\CtrlHabitInfo.Designer.cs">
+      <DependentUpon>CtrlHabitInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.cs">
       <SubType>UserControl</SubType>
@@ -208,8 +232,20 @@
     <EmbeddedResource Include="UserControls\CtrlCategories\CtrlFullCategories.resx">
       <DependentUpon>CtrlFullCategories.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHabit\Add Edit Habit\CtrlAddEditHabit.resx">
+      <DependentUpon>CtrlAddEditHabit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHabit\CtrlFullHabits.resx">
+      <DependentUpon>CtrlFullHabits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlHabit\CtrlHabits.resx">
       <DependentUpon>CtrlHabits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHabit\Habit Info\CtrlFullHabitInfo.resx">
+      <DependentUpon>CtrlFullHabitInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHabit\Habit Info\CtrlHabitInfo.resx">
+      <DependentUpon>CtrlHabitInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.resx">
       <DependentUpon>CtrlAddEditAttachment.cs</DependentUpon>
@@ -468,7 +504,7 @@
     <None Include="Resources\close1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Attachments\" />
+    <None Include="Resources\routine %283%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\folder.png" />
@@ -514,6 +550,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mental-health %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch-on %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switch-off %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inbox %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
