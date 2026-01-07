@@ -1,5 +1,6 @@
 ﻿using PPTMS.UserControls.CtrlHabit.Add_Edit_Habit;
 using PPTMS.UserControls.CtrlHabit.Habit_Info;
+using PPTMS.UserControls.CtrlHabit.View_Progress;
 using PPTMS.UserControls.CtrlTasks;
 using System;
 using System.Collections.Generic;
@@ -60,7 +61,11 @@ namespace PPTMS.UserControls.CtrlHabit
 
         private void ctrlHabits1_OnViewProgress_Click(int obj)
         {
+            CtrlViewProgress viewProgress = new CtrlViewProgress(obj);
 
+            viewProgress.OnBack_Click+= CtrlHabits1_OnBack_Click;
+
+            LoadControl(viewProgress);
         }
     }
 }

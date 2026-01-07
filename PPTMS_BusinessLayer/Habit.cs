@@ -44,6 +44,16 @@ namespace PPTMS_BusinessLayer
 
         }
 
+        public string StatusText
+        {
+            get
+            {
+                return IsArchived ? "Archived" : IsActive ? "Active" : "Deactive";
+
+            }
+
+        }
+
         public clsHabit()
         {
             HabitID = -1;
@@ -150,5 +160,19 @@ namespace PPTMS_BusinessLayer
             return clsHabitsData.IsCheckIn(this.HabitID);
         }
 
+        public int CurrentStreak()
+        {
+            return clsHabitsData.CurrentStreak(this.HabitID);
+        }
+        
+        public int BestStreak()
+        {
+            return clsHabitsData.BestStreak(this.HabitID);
+        }
+
+        public float CompletionRate()
+        {
+            return clsHabitsData.CompletionRate(this.HabitID);
+        }
     }
 }

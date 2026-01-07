@@ -116,6 +116,12 @@
     <Compile Include="UserControls\CtrlHabit\Habit Info\CtrlHabitInfo.Designer.cs">
       <DependentUpon>CtrlHabitInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.Designer.cs">
+      <DependentUpon>CtrlViewProgress.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlHabit\Habit Info\CtrlHabitInfo.resx">
       <DependentUpon>CtrlHabitInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.resx">
+      <DependentUpon>CtrlViewProgress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.resx">
       <DependentUpon>CtrlAddEditAttachment.cs</DependentUpon>
@@ -562,6 +571,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\inbox %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\self-confidence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\self-confidence1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advancement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burnout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interest-rate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\habits1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\habits_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start-date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

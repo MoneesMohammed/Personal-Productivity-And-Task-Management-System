@@ -283,7 +283,6 @@ namespace PPTMS_DataAccessLayar
             return (RowAffected > 0);
         }
 
-
         public static bool IsCheckIn(int HabitID)
         {
             bool isFound = false;
@@ -320,6 +319,112 @@ namespace PPTMS_DataAccessLayar
 
         }
 
+        public static int CurrentStreak(int HabitID)
+        {
+            int CurrentStreak = -1;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT COUNT(*) AS CurrentStreak
+                             FROM (
+                                   SELECT LogDate,ROW_NUMBER() OVER (ORDER BY LogDate DESC) AS RowNumber
+                                   FROM HabitLogs    
+                                   WHERE HabitID = @HabitID  
+                                 ) R1Logs
+                             WHERE DATEADD(DAY, -(RowNumber - 1), CAST(GETDATE() AS DATE)) = LogDate;";
 
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@HabitID", HabitID);
+
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null && int.TryParse(Result.ToString(), out int currentStreak))
+                {
+                    CurrentStreak = currentStreak;
+                }
+
+            }
+            catch
+            { CurrentStreak = -1; }
+            finally
+            { connection.Close(); }
+
+            return CurrentStreak;
+        }
+
+        public static int BestStreak(int HabitID)
+        {
+            int BestStreak = -1;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT MAX(StreakCount) AS BestStreak
+                             FROM
+                             (SELECT COUNT(*) AS StreakCount
+                             FROM (
+                                   SELECT LogDate, DATEADD(DAY, -rn, LogDate) AS grp 
+                                   FROM (
+                                          SELECT LogDate,ROW_NUMBER() OVER (ORDER BY LogDate) AS rn   
+                                          FROM HabitLogs
+                                          WHERE HabitID = @HabitID 
+                                        ) R1Logs
+                                  ) GroupedLogs
+                                 GROUP BY grp
+                             ) AS Streaks;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@HabitID", HabitID);
+
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null && int.TryParse(Result.ToString(), out int bestStreak))
+                {
+                    BestStreak = bestStreak;
+                }
+
+            }
+            catch
+            { BestStreak = -1; }
+            finally
+            { connection.Close(); }
+
+            return BestStreak;
+        }
+
+        public static float CompletionRate(int HabitID)
+        {
+            float CompletionRate = 0;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT CAST((COUNT(hl.LogID) * 100.0) / (DATEDIFF(DAY, MIN(h.CreateDate), CAST(GETDATE() AS DATE)) + 1)
+                                 AS DECIMAL(5,2)) AS CompletionRate
+                             FROM Habits h LEFT JOIN HabitLogs hl ON h.HabitID = hl.HabitID
+                             WHERE h.HabitID = @HabitID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@HabitID", HabitID);
+
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null)
+                {
+                    CompletionRate = Convert.ToSingle(Result.ToString());
+                }
+
+            }
+            catch
+            { CompletionRate = 0; }
+            finally
+            { connection.Close(); }
+
+            return CompletionRate;
+        }
     }
 }

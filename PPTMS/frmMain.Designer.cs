@@ -99,7 +99,7 @@
             this.btnHabits.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHabits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHabits.ForeColor = System.Drawing.Color.White;
-            this.btnHabits.Image = global::PPTMS.Properties.Resources.Habits;
+            this.btnHabits.Image = global::PPTMS.Properties.Resources.habits;
             this.btnHabits.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHabits.Location = new System.Drawing.Point(11, 330);
             this.btnHabits.Name = "btnHabits";

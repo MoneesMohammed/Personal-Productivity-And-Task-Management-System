@@ -3,16 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\habit info\\ctrlhabitinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\habit info\\ctrlhabitinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\view progress\\ctrlviewprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\view progress\\ctrlviewprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\habit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\view progress\\ctrlviewprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\view progress\\ctrlviewprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\ctrlhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -22,13 +33,18 @@
       "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\habitsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\habit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\habitlogsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59C2A194-8CA2-4947-B311-EAEF9EAC5485}|..\\PPTMS_BusinessLayer\\PPTMS_BusinessLayer.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_businesslayer\\habitlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\ctrlhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\ctrlhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D975E8-05B3-4E02-B53A-E9700885719B}|PPTMS.csproj|solutionrelative:usercontrols\\ctrlhabit\\ctrlfullhabits.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{71B99C97-21EE-4C69-A771-64CB3B32C400}|..\\PPTMS_DataAccessLayar\\PPTMS_DataAccessLayar.csproj|c:\\users\\nuwmo\\onedrive\\desktop\\pogrimming c#\\pptms_dataaccesslayar\\tasklogsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -44,7 +60,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,106 +73,148 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CtrlHabitInfo.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\Habit Info\\CtrlHabitInfo.cs",
+              "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\Habit Info\\CtrlHabitInfo.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\Habit Info\\CtrlHabitInfo.cs",
+              "RelativeToolTip": "UserControls\\CtrlHabit\\Habit Info\\CtrlHabitInfo.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwDoAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T22:35:46.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CtrlViewProgress.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs",
+              "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs",
+              "RelativeToolTip": "UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAmwEEAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T19:37:59.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CtrlViewProgress.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs",
+              "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs [Design]",
+              "RelativeToolTip": "UserControls\\CtrlHabit\\View Progress\\CtrlViewProgress.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T19:33:48.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CtrlFullHabits.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlFullHabits.cs",
               "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\CtrlFullHabits.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlFullHabits.cs",
               "RelativeToolTip": "UserControls\\CtrlHabit\\CtrlFullHabits.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAwDcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAA4wD8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:25:57.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-05T19:25:57.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "CtrlFullHabits.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlFullHabits.cs",
               "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\CtrlFullHabits.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlFullHabits.cs [Design]",
               "RelativeToolTip": "UserControls\\CtrlHabit\\CtrlFullHabits.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-05T19:22:52.5Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-05T19:22:52.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
+              "Title": "CtrlHabits.cs",
+              "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlHabits.cs",
+              "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\CtrlHabits.cs",
+              "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlHabits.cs",
+              "RelativeToolTip": "UserControls\\CtrlHabit\\CtrlHabits.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T19:38:05.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CtrlHabits.cs [Design]",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlHabits.cs",
               "RelativeDocumentMoniker": "UserControls\\CtrlHabit\\CtrlHabits.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\UserControls\\CtrlHabit\\CtrlHabits.cs [Design]",
               "RelativeToolTip": "UserControls\\CtrlHabit\\CtrlHabits.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-03T16:45:22.335Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-03T16:45:22.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "frmMain.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS\\frmMain.cs",
               "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAKMAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAiwKMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-03T17:07:09.821Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "HabitLogsData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\HabitLogsData.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\HabitLogsData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\HabitLogsData.cs",
               "RelativeToolTip": "..\\PPTMS_DataAccessLayar\\HabitLogsData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwFgAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwIoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-04T19:44:11.519Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HabitLog.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\HabitLog.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\HabitLog.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\HabitLog.cs",
               "RelativeToolTip": "..\\PPTMS_BusinessLayer\\HabitLog.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-04T19:44:32.041Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "HabitsData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\HabitsData.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\HabitsData.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\HabitsData.cs",
               "RelativeToolTip": "..\\PPTMS_DataAccessLayar\\HabitsData.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADcAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAQwI0BAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T18:32:14.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-04T18:32:14.364Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Habit.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\Habit.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\Habit.cs",
               "ToolTip": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\Habit.cs",
               "RelativeToolTip": "..\\PPTMS_BusinessLayer\\Habit.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAADwv10AAABUAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAywDIAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T18:32:34.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-04T18:32:34.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "TaskLogsData.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_DataAccessLayar\\TaskLogsData.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_DataAccessLayar\\TaskLogsData.cs",
@@ -168,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "TaskLog.cs",
               "DocumentMoniker": "C:\\Users\\nuwmo\\OneDrive\\Desktop\\pogrimming C#\\PPTMS_BusinessLayer\\TaskLog.cs",
               "RelativeDocumentMoniker": "..\\PPTMS_BusinessLayer\\TaskLog.cs",

@@ -137,7 +137,5 @@ namespace PPTMS_DataAccessLayar
             return dt;
         }
 
-
-
     }
 }
