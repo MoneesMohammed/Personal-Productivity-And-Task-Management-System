@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(505, 32);
+            this.label1.Location = new System.Drawing.Point(562, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(241, 39);
             this.label1.TabIndex = 72;
@@ -67,7 +67,7 @@
             // 
             this.lblTodayStatus.AutoSize = true;
             this.lblTodayStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayStatus.Location = new System.Drawing.Point(343, 402);
+            this.lblTodayStatus.Location = new System.Drawing.Point(359, 401);
             this.lblTodayStatus.Name = "lblTodayStatus";
             this.lblTodayStatus.Size = new System.Drawing.Size(198, 31);
             this.lblTodayStatus.TabIndex = 105;
@@ -77,7 +77,7 @@
             // 
             this.lblCompletionRate.AutoSize = true;
             this.lblCompletionRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompletionRate.Location = new System.Drawing.Point(343, 320);
+            this.lblCompletionRate.Location = new System.Drawing.Point(359, 319);
             this.lblCompletionRate.Name = "lblCompletionRate";
             this.lblCompletionRate.Size = new System.Drawing.Size(68, 31);
             this.lblCompletionRate.TabIndex = 108;
@@ -87,7 +87,7 @@
             // 
             this.lblCurrentStreak.AutoSize = true;
             this.lblCurrentStreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentStreak.Location = new System.Drawing.Point(343, 157);
+            this.lblCurrentStreak.Location = new System.Drawing.Point(359, 156);
             this.lblCurrentStreak.Name = "lblCurrentStreak";
             this.lblCurrentStreak.Size = new System.Drawing.Size(29, 31);
             this.lblCurrentStreak.TabIndex = 107;
@@ -97,7 +97,7 @@
             // 
             this.lblBestStreak.AutoSize = true;
             this.lblBestStreak.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBestStreak.Location = new System.Drawing.Point(343, 242);
+            this.lblBestStreak.Location = new System.Drawing.Point(359, 241);
             this.lblBestStreak.Name = "lblBestStreak";
             this.lblBestStreak.Size = new System.Drawing.Size(44, 31);
             this.lblBestStreak.TabIndex = 106;
@@ -107,7 +107,7 @@
             // 
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartDate.Location = new System.Drawing.Point(838, 318);
+            this.lblStartDate.Location = new System.Drawing.Point(854, 317);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(75, 31);
             this.lblStartDate.TabIndex = 116;
@@ -117,7 +117,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(838, 402);
+            this.lblStatus.Location = new System.Drawing.Point(854, 401);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(75, 31);
             this.lblStatus.TabIndex = 115;
@@ -127,7 +127,7 @@
             // 
             this.lblHabitName.AutoSize = true;
             this.lblHabitName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHabitName.Location = new System.Drawing.Point(838, 167);
+            this.lblHabitName.Location = new System.Drawing.Point(854, 166);
             this.lblHabitName.Name = "lblHabitName";
             this.lblHabitName.Size = new System.Drawing.Size(75, 31);
             this.lblHabitName.TabIndex = 114;
@@ -137,7 +137,7 @@
             // 
             this.lblFrequency.AutoSize = true;
             this.lblFrequency.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrequency.Location = new System.Drawing.Point(838, 247);
+            this.lblFrequency.Location = new System.Drawing.Point(854, 246);
             this.lblFrequency.Name = "lblFrequency";
             this.lblFrequency.Size = new System.Drawing.Size(75, 31);
             this.lblFrequency.TabIndex = 113;
@@ -148,7 +148,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Image = global::PPTMS.Properties.Resources.start_date;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Location = new System.Drawing.Point(612, 317);
+            this.label10.Location = new System.Drawing.Point(628, 316);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(210, 41);
             this.label10.TabIndex = 112;
@@ -160,7 +160,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Image = global::PPTMS.Properties.Resources.status;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(612, 397);
+            this.label11.Location = new System.Drawing.Point(628, 396);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(210, 41);
             this.label11.TabIndex = 111;
@@ -172,7 +172,7 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(612, 157);
+            this.label12.Location = new System.Drawing.Point(628, 156);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(210, 41);
             this.label12.TabIndex = 110;
@@ -184,7 +184,7 @@
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.Image = global::PPTMS.Properties.Resources.routine__3_;
             this.lbl1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl1.Location = new System.Drawing.Point(612, 237);
+            this.lbl1.Location = new System.Drawing.Point(628, 236);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(210, 41);
             this.lbl1.TabIndex = 109;
@@ -196,7 +196,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Image = global::PPTMS.Properties.Resources.interest_rate;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(73, 315);
+            this.label4.Location = new System.Drawing.Point(89, 314);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(264, 41);
             this.label4.TabIndex = 104;
@@ -208,7 +208,7 @@
             this.labelToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelToday.Image = global::PPTMS.Properties.Resources.calendar1;
             this.labelToday.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelToday.Location = new System.Drawing.Point(78, 398);
+            this.labelToday.Location = new System.Drawing.Point(94, 397);
             this.labelToday.Name = "labelToday";
             this.labelToday.Size = new System.Drawing.Size(259, 41);
             this.labelToday.TabIndex = 103;
@@ -220,7 +220,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Image = global::PPTMS.Properties.Resources.fire;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(73, 149);
+            this.label3.Location = new System.Drawing.Point(89, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(264, 41);
             this.label3.TabIndex = 102;
@@ -232,7 +232,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Image = global::PPTMS.Properties.Resources.burnout;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(68, 232);
+            this.label2.Location = new System.Drawing.Point(84, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(269, 41);
             this.label2.TabIndex = 101;
@@ -255,7 +255,7 @@
             // pBox1
             // 
             this.pBox1.Image = global::PPTMS.Properties.Resources.advancement;
-            this.pBox1.Location = new System.Drawing.Point(383, 4);
+            this.pBox1.Location = new System.Drawing.Point(440, 3);
             this.pBox1.Name = "pBox1";
             this.pBox1.Size = new System.Drawing.Size(116, 96);
             this.pBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

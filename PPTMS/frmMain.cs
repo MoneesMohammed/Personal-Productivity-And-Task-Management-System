@@ -5,7 +5,7 @@ using PPTMS.UserControls.CtrlTasks;
 using PPTMS.UserControls.CtrlUser;
 using PPTMS_BusinessLayer;
 using System;
-using System.Collections.Generic;
+using PPTMS.UserControls.CtrlStatistics;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -142,7 +142,9 @@ namespace PPTMS
 
         private void btnStatistics_Click(object sender, EventArgs e)
         {
-            
+            CtrlStatistics  statistics = new CtrlStatistics();
+
+            LoadCenteredControl(statistics);
         }
 
         private void btnCategories_Click(object sender, EventArgs e)

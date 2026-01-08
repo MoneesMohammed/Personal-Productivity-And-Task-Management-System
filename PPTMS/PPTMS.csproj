@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -121,6 +122,12 @@
     </Compile>
     <Compile Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.Designer.cs">
       <DependentUpon>CtrlViewProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CtrlStatistics\CtrlStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlStatistics\CtrlStatistics.Designer.cs">
+      <DependentUpon>CtrlStatistics.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.cs">
       <SubType>UserControl</SubType>
@@ -255,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.resx">
       <DependentUpon>CtrlViewProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlStatistics\CtrlStatistics.resx">
+      <DependentUpon>CtrlStatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlTasks\Attachments\CtrlAddEditAttachment.resx">
       <DependentUpon>CtrlAddEditAttachment.cs</DependentUpon>
@@ -613,6 +623,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\description.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interest-rate %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archive1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\active-lifestyle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\habits_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\needs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interest-rate %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\histogram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-time.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
