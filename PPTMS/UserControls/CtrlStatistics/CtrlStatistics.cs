@@ -1,8 +1,11 @@
-﻿using PPTMS.Properties;
+﻿using PPTMS.Global_Classes;
+using PPTMS.Properties;
+using PPTMS_BusinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +18,7 @@ namespace PPTMS.UserControls.CtrlStatistics
     public partial class CtrlStatistics : UserControl
     {
         private static bool _toggle;
-
+        private clsStatistic _Statistic;
         public CtrlStatistics()
         {
             InitializeComponent();
@@ -26,12 +29,11 @@ namespace PPTMS.UserControls.CtrlStatistics
             _toggle = !_toggle;
             pBox1.Image = _toggle ? Resources.description : Resources.hr;
 
-            TasksbyStatus_PieChart();
-            TasksbyStatus_BarChart();
-            TasksCompletedChart();
+            LoadInfo();
+
         }
 
-        private void TasksbyStatus_PieChart()
+        private void TasksbyStatus_PieChart(int Completed , int InProgress , int OnHold)
         {
             // Clear default series if any exist
             chart1.Series.Clear();
@@ -43,9 +45,9 @@ namespace PPTMS.UserControls.CtrlStatistics
 
             // Add data points (Argument, Value)
             // The arguments are the labels, and the values are the slice sizes
-            series1.Points.AddXY("Completed", 3);
-            series1.Points.AddXY("In Progress", 4);
-            series1.Points.AddXY("On Hold", 2);
+            series1.Points.AddXY("Completed", Completed);
+            series1.Points.AddXY("In Progress", InProgress);
+            series1.Points.AddXY("On Hold", OnHold);
 
             // Optional: Format labels to show percentage and value
             //series1.LabelFormat = "{P0}"; // Shows percentage with 2 decimal places
@@ -64,7 +66,7 @@ namespace PPTMS.UserControls.CtrlStatistics
             chart1.Legends[0].Font = new Font("Verdana", 13f);
         }
 
-        private void TasksbyStatus_BarChart()
+        private void TasksbyStatus_BarChart(int Low , int Medium, int High, int Critical)
         {
             // Optional: Clear default series and chart areas if they exist
             chart2.ChartAreas.Clear();
@@ -96,10 +98,10 @@ namespace PPTMS.UserControls.CtrlStatistics
             };
 
             // 3. Add Data Points (example data)
-            seriesSales.Points.AddXY("Low", 3);
-            seriesSales.Points.AddXY("Medium", 4);
-            seriesSales.Points.AddXY("High", 5);
-            seriesSales.Points.AddXY("Critical", 7);
+            seriesSales.Points.AddXY("Low", Low);
+            seriesSales.Points.AddXY("Medium", Medium);
+            seriesSales.Points.AddXY("High", High);
+            seriesSales.Points.AddXY("Critical", Critical);
 
             // 4. Add the Series to the Chart control
             chart2.Series.Add(seriesSales);
@@ -110,7 +112,7 @@ namespace PPTMS.UserControls.CtrlStatistics
 
         }
 
-        private void TasksCompletedChart()
+        private void TasksCompletedChart(int Today, int ThisWeek, int ThisMonth)
         {
             // Clear any default series that might exist
             chart3.Series.Clear();
@@ -134,9 +136,9 @@ namespace PPTMS.UserControls.CtrlStatistics
             series1.ChartType = SeriesChartType.Column;
 
             // Add sample data points
-            series1.Points.AddXY("Today", 2);
-            series1.Points.AddXY("This Week", 7);
-            series1.Points.AddXY("This Month", 15);
+            series1.Points.AddXY("Today", Today);
+            series1.Points.AddXY("This Week", ThisWeek);
+            series1.Points.AddXY("This Month", ThisMonth);
             
 
             // Add the series to the chart control
@@ -149,6 +151,72 @@ namespace PPTMS.UserControls.CtrlStatistics
             //chart3.ChartAreas[0].AxisY.Title = "Sales Value";
             series1.IsValueShownAsLabel = true; // Display values on top of bars
         }
+
+
+        public void LoadInfo()
+        {
+            _Statistic = clsStatistic.Find(clsGlobal.CurrentUser.UserID);
+
+            if (_Statistic == null)
+            {
+                ResetStatisticInfo();
+                MessageBox.Show($"No Statistic ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _FillStatisticInfo();
+
+        }
+
+        private void _FillStatisticInfo()
+        {
+            lblTotalTasks.Text                 = _Statistic.TotalTasks.ToString("0");
+            lblArchivedTasks.Text              = _Statistic.ArchivedTasks.ToString("0");
+            lblCompletionRate.Text             = _Statistic.CompletionRate.ToString()+"%";
+
+            lblTotalEstimatedTime.Text         = _Statistic.TotalEstimatedTime.ToString("0");
+
+            lblTimeSpentOnCompletedTasks.Text  = _Statistic.TimeSpentOnCompletedTasks.ToString("0");
+            lblAverageTaskDuration.Text        = _Statistic.AverageTaskDuration.ToString();
+
+            lblTotalHabits.Text                = _Statistic.TotalHabits.ToString("0");
+            lblActiveHabits.Text               = _Statistic.ActiveHabits.ToString("0");
+            lblArchivedHabits.Text             = _Statistic.ArchivedHabits.ToString("0");
+
+            TasksbyStatus_PieChart(_Statistic.CompletedTasks, _Statistic.InProgress, _Statistic.OnHold);
+            TasksbyStatus_BarChart(_Statistic.Low, _Statistic.Medium, _Statistic.High, _Statistic.Critical);
+            TasksCompletedChart(_Statistic.Today, _Statistic.ThisWeek, _Statistic.ThisMonth);
+
+            lblInsight1.Text = _Statistic.CompleteMoreTasksIn != "" ?
+                $"You complete more tasks in the {_Statistic.CompleteMoreTasksIn}" : "N/A";
+
+            lblInsight3.Text = _Statistic.BestHabit != "" ?
+                $"Your best habit: {_Statistic.BestHabit} ({clsHabit.Find(_Statistic.HabitID).CompletionRate()}%) " : "N/A";
+
+
+        }
+
+        private void ResetStatisticInfo()
+        {
+            lblTotalTasks.Text                 = "[???]";
+            lblArchivedTasks.Text              = "[???]";
+            lblCompletionRate.Text             = "[???]";
+            lblTotalEstimatedTime.Text         = "[???]";
+            lblTimeSpentOnCompletedTasks.Text  = "[???]";
+            lblAverageTaskDuration.Text        = "[???]";
+            lblTotalHabits.Text                = "[???]";
+            lblActiveHabits.Text               = "[???]";
+            lblArchivedHabits.Text             = "[???]";
+
+            TasksbyStatus_PieChart(0, 0, 0);
+            TasksbyStatus_BarChart(0, 0, 0 ,0);
+            TasksCompletedChart(0, 0, 0);
+
+            lblInsight1.Text = "N/A";
+            lblInsight3.Text = "N/A";
+        }
+
+
 
     }
 }

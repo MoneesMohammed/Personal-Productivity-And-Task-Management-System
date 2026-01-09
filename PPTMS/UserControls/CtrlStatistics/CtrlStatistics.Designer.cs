@@ -28,44 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblArchivedTasks = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.lblCompletionRate = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.lblTotalTasks = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblAverageTaskDuration = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.lblTotalEstimatedTime = new System.Windows.Forms.Label();
             this.lblTimeSpentOnCompletedTasks = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblArchivedHabits = new System.Windows.Forms.Label();
-            this.lblTotalHabits = new System.Windows.Forms.Label();
-            this.lblActiveHabits = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblInsight3 = new System.Windows.Forms.Label();
-            this.lblInsight2 = new System.Windows.Forms.Label();
-            this.lblInsight1 = new System.Windows.Forms.Label();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblArchivedHabits = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblTotalHabits = new System.Windows.Forms.Label();
+            this.lblActiveHabits = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblInsight3 = new System.Windows.Forms.Label();
+            this.lblInsight1 = new System.Windows.Forms.Label();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -115,6 +114,18 @@
             this.lblArchivedTasks.TabIndex = 141;
             this.lblArchivedTasks.Text = "[???]";
             // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Image = global::PPTMS.Properties.Resources.interest_rate__2_;
+            this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label16.Location = new System.Drawing.Point(16, 141);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(254, 32);
+            this.label16.TabIndex = 139;
+            this.label16.Text = "Completion Rate";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblCompletionRate
             // 
             this.lblCompletionRate.AutoSize = true;
@@ -124,6 +135,18 @@
             this.lblCompletionRate.Size = new System.Drawing.Size(55, 25);
             this.lblCompletionRate.TabIndex = 140;
             this.lblCompletionRate.Text = "??%";
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Image = global::PPTMS.Properties.Resources.archive1;
+            this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label18.Location = new System.Drawing.Point(16, 96);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(254, 32);
+            this.label18.TabIndex = 138;
+            this.label18.Text = "Archived Tasks";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTotalTasks
             // 
@@ -135,36 +158,48 @@
             this.lblTotalTasks.TabIndex = 135;
             this.lblTotalTasks.Text = "[???]";
             // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Image = global::PPTMS.Properties.Resources.clipboard1;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(16, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(254, 32);
+            this.label3.TabIndex = 118;
+            this.label3.Text = "Total Tasks";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // chart1
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(546, 87);
             this.chart1.Name = "chart1";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart1.Series.Add(series7);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(547, 212);
             this.chart1.TabIndex = 134;
             this.chart1.Text = "chart1";
             // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart2.Legends.Add(legend5);
             this.chart2.Location = new System.Drawing.Point(546, 319);
             this.chart2.Name = "chart2";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart2.Series.Add(series8);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart2.Series.Add(series5);
             this.chart2.Size = new System.Drawing.Size(547, 211);
             this.chart2.TabIndex = 135;
             this.chart2.Text = "chart2";
@@ -195,6 +230,18 @@
             this.lblAverageTaskDuration.TabIndex = 137;
             this.lblAverageTaskDuration.Text = "[???]";
             // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Image = global::PPTMS.Properties.Resources.histogram;
+            this.label23.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label23.Location = new System.Drawing.Point(6, 166);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(264, 32);
+            this.label23.TabIndex = 120;
+            this.label23.Text = "Average Task Duration";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblTotalEstimatedTime
             // 
             this.lblTotalEstimatedTime.AutoSize = true;
@@ -214,6 +261,30 @@
             this.lblTimeSpentOnCompletedTasks.Size = new System.Drawing.Size(60, 25);
             this.lblTimeSpentOnCompletedTasks.TabIndex = 134;
             this.lblTimeSpentOnCompletedTasks.Text = "[???]";
+            // 
+            // label26
+            // 
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Image = global::PPTMS.Properties.Resources.hourglass;
+            this.label26.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label26.Location = new System.Drawing.Point(12, 91);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(258, 60);
+            this.label26.TabIndex = 119;
+            this.label26.Text = "Time Spent on Completed Tasks";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label27
+            // 
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Image = global::PPTMS.Properties.Resources.fast_time;
+            this.label27.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label27.Location = new System.Drawing.Point(6, 54);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(264, 32);
+            this.label27.TabIndex = 118;
+            this.label27.Text = "Total Estimated Time";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox3
             // 
@@ -241,6 +312,18 @@
             this.lblArchivedHabits.TabIndex = 137;
             this.lblArchivedHabits.Text = "[???]";
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Image = global::PPTMS.Properties.Resources.archive1;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(6, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(263, 32);
+            this.label4.TabIndex = 120;
+            this.label4.Text = "Archived Habits";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblTotalHabits
             // 
             this.lblTotalHabits.AutoSize = true;
@@ -260,80 +343,6 @@
             this.lblActiveHabits.Size = new System.Drawing.Size(60, 25);
             this.lblActiveHabits.TabIndex = 134;
             this.lblActiveHabits.Text = "[???]";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.lblInsight3);
-            this.groupBox4.Controls.Add(this.lblInsight2);
-            this.groupBox4.Controls.Add(this.lblInsight1);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(264, 743);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(511, 180);
-            this.groupBox4.TabIndex = 144;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Insights";
-            // 
-            // lblInsight3
-            // 
-            this.lblInsight3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInsight3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblInsight3.Location = new System.Drawing.Point(6, 133);
-            this.lblInsight3.Name = "lblInsight3";
-            this.lblInsight3.Size = new System.Drawing.Size(493, 32);
-            this.lblInsight3.TabIndex = 120;
-            this.lblInsight3.Text = "Your best habit: Push-ups (85%)";
-            this.lblInsight3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblInsight2
-            // 
-            this.lblInsight2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInsight2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblInsight2.Location = new System.Drawing.Point(6, 94);
-            this.lblInsight2.Name = "lblInsight2";
-            this.lblInsight2.Size = new System.Drawing.Size(493, 32);
-            this.lblInsight2.TabIndex = 119;
-            this.lblInsight2.Text = "High priority tasks are often delayed";
-            this.lblInsight2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblInsight1
-            // 
-            this.lblInsight1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInsight1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblInsight1.Location = new System.Drawing.Point(6, 55);
-            this.lblInsight1.Name = "lblInsight1";
-            this.lblInsight1.Size = new System.Drawing.Size(493, 32);
-            this.lblInsight1.TabIndex = 118;
-            this.lblInsight1.Text = "You complete more tasks in the evening";
-            this.lblInsight1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // chart3
-            // 
-            chartArea9.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chart3.Legends.Add(legend9);
-            this.chart3.Location = new System.Drawing.Point(546, 545);
-            this.chart3.Name = "chart3";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart3.Series.Add(series9);
-            this.chart3.Size = new System.Drawing.Size(547, 180);
-            this.chart3.TabIndex = 145;
-            this.chart3.Text = "chart3";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Image = global::PPTMS.Properties.Resources.archive1;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(6, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(263, 32);
-            this.label4.TabIndex = 120;
-            this.label4.Text = "Archived Habits";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -359,77 +368,55 @@
             this.label19.Text = "Total Habits";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label23
+            // groupBox4
             // 
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Image = global::PPTMS.Properties.Resources.histogram;
-            this.label23.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label23.Location = new System.Drawing.Point(6, 166);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(264, 32);
-            this.label23.TabIndex = 120;
-            this.label23.Text = "Average Task Duration";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.groupBox4.Controls.Add(this.lblInsight3);
+            this.groupBox4.Controls.Add(this.lblInsight1);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(264, 743);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(511, 180);
+            this.groupBox4.TabIndex = 144;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Insights";
             // 
-            // label26
+            // lblInsight3
             // 
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Image = global::PPTMS.Properties.Resources.hourglass;
-            this.label26.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label26.Location = new System.Drawing.Point(12, 91);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(258, 60);
-            this.label26.TabIndex = 119;
-            this.label26.Text = "Time Spent on Completed Tasks";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblInsight3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsight3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblInsight3.Location = new System.Drawing.Point(6, 105);
+            this.lblInsight3.Name = "lblInsight3";
+            this.lblInsight3.Size = new System.Drawing.Size(493, 32);
+            this.lblInsight3.TabIndex = 120;
+            this.lblInsight3.Text = "Your best habit: Push-ups (85%)";
+            this.lblInsight3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label27
+            // lblInsight1
             // 
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Image = global::PPTMS.Properties.Resources.fast_time;
-            this.label27.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label27.Location = new System.Drawing.Point(6, 54);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(264, 32);
-            this.label27.TabIndex = 118;
-            this.label27.Text = "Total Estimated Time";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblInsight1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInsight1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblInsight1.Location = new System.Drawing.Point(6, 55);
+            this.lblInsight1.Name = "lblInsight1";
+            this.lblInsight1.Size = new System.Drawing.Size(493, 32);
+            this.lblInsight1.TabIndex = 118;
+            this.lblInsight1.Text = "You complete more tasks in the evening";
+            this.lblInsight1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label16
+            // chart3
             // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Image = global::PPTMS.Properties.Resources.interest_rate__2_;
-            this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label16.Location = new System.Drawing.Point(16, 141);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(254, 32);
-            this.label16.TabIndex = 139;
-            this.label16.Text = "Completion Rate";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Image = global::PPTMS.Properties.Resources.archive1;
-            this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label18.Location = new System.Drawing.Point(16, 96);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(254, 32);
-            this.label18.TabIndex = 138;
-            this.label18.Text = "Archived Tasks";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Image = global::PPTMS.Properties.Resources.clipboard1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(16, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(254, 32);
-            this.label3.TabIndex = 118;
-            this.label3.Text = "Total Tasks";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            chartArea6.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart3.Legends.Add(legend6);
+            this.chart3.Location = new System.Drawing.Point(546, 545);
+            this.chart3.Name = "chart3";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart3.Series.Add(series6);
+            this.chart3.Size = new System.Drawing.Size(547, 180);
+            this.chart3.TabIndex = 145;
+            this.chart3.Text = "chart3";
             // 
             // pBox1
             // 
@@ -502,7 +489,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label lblInsight3;
-        private System.Windows.Forms.Label lblInsight2;
         private System.Windows.Forms.Label lblInsight1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
     }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Habit.cs" />
     <Compile Include="HabitLog.cs" />
+    <Compile Include="Statistic.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="TaskAttachment.cs" />
     <Compile Include="TaskCategory.cs" />
