@@ -24,6 +24,7 @@ namespace PPTMS.UserControls.CtrlHabit
         
 
         private DataTable _dtHabits;
+        private int _SelectedHabitID = -1;
 
         private static bool _toggle;
 
@@ -45,6 +46,24 @@ namespace PPTMS.UserControls.CtrlHabit
             lblRecodes.Text = dgvHabits.Rows.Count.ToString();
             _FormatDGV();
 
+            if (cbFilterBy.SelectedIndex != 0)
+            {
+                if (cbFilterBy.Text == "Habit ID" || cbFilterBy.Text == "Name")
+                {
+                    ApplyFilterOfTextBox();
+                }
+                else if (cbFilterBy.Text == "Archived")
+                {
+                    _dtHabits.DefaultView.RowFilter = string.Format("[Is Archived] = 'Yes'");
+                }
+                else
+                {
+                    ApplyFilterOfComboBox();
+                }
+            }
+
+            RestoreSelection(_SelectedHabitID);
+
         }
 
         private void CtrlHabits_Load(object sender, EventArgs e)
@@ -55,8 +74,8 @@ namespace PPTMS.UserControls.CtrlHabit
             if (this.DesignMode)
                 return;
 
-            RefreshHabitsList();
             cbFilterBy.SelectedIndex = 0;
+            RefreshHabitsList();
 
         }
 
@@ -84,8 +103,12 @@ namespace PPTMS.UserControls.CtrlHabit
                 return;
             }
 
-            int HabitID = (int)dgvHabits.CurrentRow.Cells[0].Value;
-            clsHabit Habit = clsHabit.Find(HabitID);
+            if (dgvHabits.CurrentRow != null)
+            {
+                _SelectedHabitID = (int)dgvHabits.CurrentRow.Cells[0].Value;
+            }
+
+            clsHabit Habit = clsHabit.Find(_SelectedHabitID);
 
             tsmActivateAndDeactivate.Text  = Habit.IsActive ? "Deactivate" : "Activate" ;
             tsmActivateAndDeactivate.Image = Habit.IsActive ? Resources.switch_off : Resources.switch_on;
@@ -96,7 +119,7 @@ namespace PPTMS.UserControls.CtrlHabit
             {
                 tsmCheckIn.Enabled = true;
             }
-            else if(Habit.IsCheckIn() && Habit.IsActive)
+            else if(Habit.IsTodayCheckIn() && Habit.IsActive)
             { 
                 tsmUndoCheckIn.Enabled = true;
             }
@@ -150,7 +173,7 @@ namespace PPTMS.UserControls.CtrlHabit
         {
             clsHabitLog HabitLog = new clsHabitLog();
 
-            HabitLog.HabitID = (int)dgvHabits.CurrentRow.Cells[0].Value;
+            HabitLog.HabitID = _SelectedHabitID;
 
             var result = MessageBox.Show($"Are you sure you want to Check-In the Habit \nby HabitID: {HabitLog.HabitID}", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
@@ -176,7 +199,7 @@ namespace PPTMS.UserControls.CtrlHabit
         {
             clsHabitLog HabitLog = new clsHabitLog();
 
-            HabitLog.HabitID = (int)dgvHabits.CurrentRow.Cells[0].Value;
+            HabitLog.HabitID = _SelectedHabitID;
 
             var result = MessageBox.Show($"Are you sure you want to Undo Check-In the Habit \nby HabitID: {HabitLog.HabitID}", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
@@ -315,21 +338,34 @@ namespace PPTMS.UserControls.CtrlHabit
 
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFilter.Text == "All")
+            ApplyFilterOfComboBox();
+        }
+
+        private void txtFilterBy_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilterOfTextBox();
+
+        }
+
+        private void ApplyFilterOfComboBox()
+        {
+            string FilterColumn = cbFilter.Text;
+            string FilterByColumn = cbFilterBy.Text;
+
+            if (FilterColumn == "All")
             {
-                RefreshHabitsList();
+                _dtHabits.DefaultView.RowFilter = "[Is Archived] = 'No'";
+                lblRecodes.Text = _dtHabits.Rows.Count.ToString();
                 return;
             }
-
-            string FilterColumn   = cbFilter.Text;
-            string FilterByColumn = cbFilterBy.Text;
 
             _dtHabits.DefaultView.RowFilter = string.Format($"[{FilterByColumn}] = '{FilterColumn}' AND [Is Archived] = 'No'");
 
             lblRecodes.Text = dgvHabits.Rows.Count.ToString();
+
         }
 
-        private void txtFilterBy_TextChanged(object sender, EventArgs e)
+        private void ApplyFilterOfTextBox()
         {
             string FilterColumn = cbFilterBy.Text;
 
@@ -350,6 +386,7 @@ namespace PPTMS.UserControls.CtrlHabit
 
         }
 
+
         private void txtFilterBy_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (cbFilterBy.Text == "Habit ID")
@@ -361,5 +398,23 @@ namespace PPTMS.UserControls.CtrlHabit
 
             }
         }
+
+        private void RestoreSelection(int HabitID)
+        {
+            if (HabitID == -1) return;
+
+            foreach (DataGridViewRow row in dgvHabits.Rows)
+            {
+                if ((int)row.Cells["Habit ID"].Value == HabitID)
+                {
+                    row.Selected = true;
+                    dgvHabits.CurrentCell = row.Cells[0];
+                    dgvHabits.FirstDisplayedScrollingRowIndex = row.Index;
+                    break;
+                }
+            }
+        }
+
+
     }
 }

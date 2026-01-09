@@ -187,5 +187,14 @@ namespace PPTMS.UserControls.CtrlTasks
                 e.Handled = true;
             }
         }
+
+        private void txtEstimatedMinutes_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtEstimatedMinutes.Text, out int EstimatedMinutes) && EstimatedMinutes <= 0)
+            {
+                txtEstimatedMinutes.Text = "1";
+            }
+
+        }
     }
 }

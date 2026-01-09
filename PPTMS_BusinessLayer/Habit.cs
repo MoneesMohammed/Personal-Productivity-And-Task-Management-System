@@ -160,6 +160,11 @@ namespace PPTMS_BusinessLayer
             return clsHabitsData.IsCheckIn(this.HabitID);
         }
 
+        public bool IsTodayCheckIn()
+        {
+            return clsHabitsData.IsTodayCheckIn(this.HabitID);
+        }
+
         public int CurrentStreak()
         {
             return clsHabitsData.CurrentStreak(this.HabitID);

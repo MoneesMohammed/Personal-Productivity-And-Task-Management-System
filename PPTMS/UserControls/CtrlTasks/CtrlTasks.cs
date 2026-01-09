@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace PPTMS.UserControls.CtrlTasks
 {
@@ -21,8 +22,9 @@ namespace PPTMS.UserControls.CtrlTasks
         public event Action<int> OnReminders_Click;
         public event Action<int> OnAttachments_Click;
         
-
         private DataTable _dtTasks;
+
+        private int _SelectedTaskID = -1;
 
         public CtrlTasks()
         {
@@ -40,6 +42,20 @@ namespace PPTMS.UserControls.CtrlTasks
 
             lblRecodes.Text = dgvTasks.Rows.Count.ToString();
             _FormatDGV();
+
+            if (cbFilterBy.SelectedIndex != 0)
+            {
+                if (cbFilterBy.Text == "Task ID" || cbFilterBy.Text == "Title")
+                {
+                   ApplyFilterOfTextBox();
+                }
+                else
+                { 
+                   ApplyFilterOfComboBox();
+                }
+            }
+
+            RestoreSelection(_SelectedTaskID);
 
         }
 
@@ -65,8 +81,8 @@ namespace PPTMS.UserControls.CtrlTasks
             if (this.DesignMode)
                 return;
 
-            RefreshTasksList();
             cbFilterBy.SelectedIndex = 0;
+            RefreshTasksList();
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -76,6 +92,12 @@ namespace PPTMS.UserControls.CtrlTasks
                 e.Cancel = true;
                 return;
             }
+
+            if (dgvTasks.CurrentRow != null)
+            {
+                _SelectedTaskID = (int)dgvTasks.CurrentRow.Cells["Task ID"].Value;
+            }
+
 
             int TaskID = (int)dgvTasks.CurrentRow.Cells[0].Value;
             clsTask Task = clsTask.Find(TaskID);
@@ -279,39 +301,54 @@ namespace PPTMS.UserControls.CtrlTasks
 
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbFilter.Text == "All")
-            {
-                RefreshTasksList();
-                return;
-            }
-
-            string FilterColumn = cbFilter.Text;
-
-            string FilterByColumn = cbFilterBy.Text;
-
-            _dtTasks.DefaultView.RowFilter = string.Format($"[{FilterByColumn}] = '{FilterColumn}'");
-
-            lblRecodes.Text = dgvTasks.Rows.Count.ToString();
+            ApplyFilterOfComboBox();
         }
 
         private void txtFilterBy_TextChanged(object sender, EventArgs e)
         {
+            ApplyFilterOfTextBox();
+        }
+
+        private void ApplyFilterOfComboBox()
+        {
+            string FilterByColumn = cbFilterBy.Text;
+            string FilterColumn = cbFilter.Text;
+
+            if (FilterColumn == "All")
+            {
+                _dtTasks.DefaultView.RowFilter = "[Status] NOT = 'Archived'";
+                lblRecodes.Text = _dtTasks.Rows.Count.ToString();
+                return;
+            }
+
+            if (FilterByColumn == "Status")
+                _dtTasks.DefaultView.RowFilter = string.Format($"[{FilterByColumn}] = '{FilterColumn}'"); //[FilterColumn] = txtFilterBy.Text
+            else
+                _dtTasks.DefaultView.RowFilter = string.Format($"[{FilterByColumn}] = '{FilterColumn}' AND [Status] NOT = 'Archived'");
+
+            lblRecodes.Text = dgvTasks.Rows.Count.ToString();
+
+        }
+
+        private void ApplyFilterOfTextBox()
+        {
             string FilterColumn = cbFilterBy.Text;
 
-            if (txtFilterBy.Text.Trim() == "" || FilterColumn == "None" || FilterColumn == "Category")
+            if (txtFilterBy.Text.Trim() == "" || FilterColumn == "None" || FilterColumn == "Category" || FilterColumn == "Status" || FilterColumn == "Priority")
             {
-                _dtTasks.DefaultView.RowFilter = "";
+                _dtTasks.DefaultView.RowFilter = "[Status] NOT = 'Archived'";
                 lblRecodes.Text = _dtTasks.Rows.Count.ToString();
                 return;
             }
 
             if (FilterColumn == "Task ID")
-                _dtTasks.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilterBy.Text.Trim()); //[FilterColumn] = txtFilterBy.Text
+                _dtTasks.DefaultView.RowFilter = string.Format("[{0}] = {1} AND [Status] NOT = 'Archived'", FilterColumn, txtFilterBy.Text.Trim()); //[FilterColumn] = txtFilterBy.Text
             else
-                _dtTasks.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterBy.Text.Trim());
+                _dtTasks.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%' AND [Status] NOT = 'Archived'", FilterColumn, txtFilterBy.Text.Trim());
             //[FilterColumn] LIKE 'txtFilterBy.Text%'
 
             lblRecodes.Text = dgvTasks.Rows.Count.ToString();
+
         }
 
         private void txtFilterBy_KeyPress(object sender, KeyPressEventArgs e)
@@ -369,6 +406,23 @@ namespace PPTMS.UserControls.CtrlTasks
 
             RefreshTasksList();
         }
+
+        private void RestoreSelection(int taskID)
+        {
+            if (taskID == -1) return;
+
+            foreach (DataGridViewRow row in dgvTasks.Rows)
+            {
+                if ((int)row.Cells["Task ID"].Value == taskID)
+                {
+                    row.Selected = true;
+                    dgvTasks.CurrentCell = row.Cells[0];
+                    dgvTasks.FirstDisplayedScrollingRowIndex = row.Index;
+                    break;
+                }
+            }
+        }
+
     }
 
 

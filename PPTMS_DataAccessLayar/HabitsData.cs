@@ -288,6 +288,62 @@ namespace PPTMS_DataAccessLayar
             bool isFound = false;
 
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"DECLARE @Today DATE = CAST(GETDATE() AS DATE);
+
+                             SELECT 
+                             
+                                 CASE 
+                                     WHEN hl.LastLogDate IS NULL THEN 0 -- It has not been implemented before
+                                     WHEN h.Frequency = 0 AND @Today >= DATEADD(DAY, 1, hl.LastLogDate)  THEN 0
+                                     WHEN h.Frequency = 1 AND @Today >= DATEADD(DAY, 7, hl.LastLogDate)  THEN 0
+                                     WHEN h.Frequency = 2 AND @Today >= DATEADD(DAY, 30, hl.LastLogDate) THEN 0
+                                     ELSE 1
+                                 END AS IsDue
+                             
+                             FROM Habits h
+                             OUTER APPLY
+                             (
+                                 SELECT MAX(CAST(LogDate AS DATE)) AS LastLogDate
+                                 FROM HabitLogs
+                                 WHERE HabitID = h.HabitID
+                             ) hl
+                             WHERE h.HabitID = @HabitID; ";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@HabitID", HabitID);
+
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null && int.TryParse(Result.ToString(), out int result))
+                {
+                    isFound = Convert.ToBoolean(result);
+                }
+
+            }
+            catch //(Exception ex)
+            {
+                //Console.WriteLine("Error : " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+
+            }
+
+            return isFound;
+
+
+        }
+
+        public static bool IsTodayCheckIn(int HabitID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
             string query = @"SELECT Found = 1 FROM HabitLogs
                              WHERE HabitID = @HabitID
                              AND LogDate = CAST(GETDATE() AS DATE);";
@@ -299,6 +355,7 @@ namespace PPTMS_DataAccessLayar
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
+
                 isFound = reader.HasRows;
 
                 reader.Close();
@@ -321,7 +378,7 @@ namespace PPTMS_DataAccessLayar
 
         public static int CurrentStreak(int HabitID)
         {
-            int CurrentStreak = -1;
+            int CurrentStreak = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
             string query = @"SELECT COUNT(*) AS CurrentStreak
                              FROM (
@@ -347,7 +404,7 @@ namespace PPTMS_DataAccessLayar
 
             }
             catch
-            { CurrentStreak = -1; }
+            { CurrentStreak = 0; }
             finally
             { connection.Close(); }
 
@@ -356,7 +413,7 @@ namespace PPTMS_DataAccessLayar
 
         public static int BestStreak(int HabitID)
         {
-            int BestStreak = -1;
+            int BestStreak = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
             string query = @"SELECT MAX(StreakCount) AS BestStreak
                              FROM
@@ -388,7 +445,7 @@ namespace PPTMS_DataAccessLayar
 
             }
             catch
-            { BestStreak = -1; }
+            { BestStreak = 0; }
             finally
             { connection.Close(); }
 

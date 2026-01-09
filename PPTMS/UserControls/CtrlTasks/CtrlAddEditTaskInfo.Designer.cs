@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlAddEditTaskInfo));
             this.gbTask = new System.Windows.Forms.GroupBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.lblTaskID = new System.Windows.Forms.Label();
-            this.lblCreateDate = new System.Windows.Forms.Label();
-            this.lblMode = new System.Windows.Forms.Label();
-            this.cbPriority = new System.Windows.Forms.ComboBox();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.txtEstimatedMinutes = new System.Windows.Forms.TextBox();
-            this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
-            this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
+            this.txtEstimatedMinutes = new System.Windows.Forms.TextBox();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.cbPriority = new System.Windows.Forms.ComboBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.lblTaskID = new System.Windows.Forms.Label();
+            this.lblCreateDate = new System.Windows.Forms.Label();
+            this.lblMode = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label12 = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
@@ -82,45 +82,63 @@
             this.gbTask.TabIndex = 88;
             this.gbTask.TabStop = false;
             // 
-            // txtDescription
+            // lblStatus
             // 
-            this.txtDescription.Location = new System.Drawing.Point(270, 292);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(635, 166);
-            this.txtDescription.TabIndex = 83;
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(732, 117);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(121, 25);
+            this.lblStatus.TabIndex = 91;
+            this.lblStatus.Text = "In Progress";
             // 
-            // lblTaskID
+            // label15
             // 
-            this.lblTaskID.AutoSize = true;
-            this.lblTaskID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaskID.Location = new System.Drawing.Point(376, 155);
-            this.lblTaskID.Name = "lblTaskID";
-            this.lblTaskID.Size = new System.Drawing.Size(60, 25);
-            this.lblTaskID.TabIndex = 68;
-            this.lblTaskID.Text = "[???]";
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Image = global::PPTMS.Properties.Resources.loading;
+            this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label15.Location = new System.Drawing.Point(518, 115);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(163, 27);
+            this.label15.TabIndex = 90;
+            this.label15.Text = "Status";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblCreateDate
+            // txtTitle
             // 
-            this.lblCreateDate.AutoSize = true;
-            this.lblCreateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreateDate.Location = new System.Drawing.Point(843, 155);
-            this.lblCreateDate.Name = "lblCreateDate";
-            this.lblCreateDate.Size = new System.Drawing.Size(132, 25);
-            this.lblCreateDate.TabIndex = 84;
-            this.lblCreateDate.Text = "[????/??/??]";
+            this.txtTitle.Location = new System.Drawing.Point(270, 50);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(189, 29);
+            this.txtTitle.TabIndex = 89;
+            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
             // 
-            // lblMode
+            // dtpDueDate
             // 
-            this.lblMode.AutoSize = true;
-            this.lblMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.ForeColor = System.Drawing.Color.DarkViolet;
-            this.lblMode.Location = new System.Drawing.Point(566, 31);
-            this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(163, 39);
-            this.lblMode.TabIndex = 86;
-            this.lblMode.Text = "Add Task";
-            this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDueDate.Location = new System.Drawing.Point(270, 113);
+            this.dtpDueDate.Name = "dtpDueDate";
+            this.dtpDueDate.Size = new System.Drawing.Size(189, 29);
+            this.dtpDueDate.TabIndex = 88;
+            // 
+            // txtEstimatedMinutes
+            // 
+            this.txtEstimatedMinutes.Location = new System.Drawing.Point(270, 194);
+            this.txtEstimatedMinutes.Name = "txtEstimatedMinutes";
+            this.txtEstimatedMinutes.Size = new System.Drawing.Size(189, 29);
+            this.txtEstimatedMinutes.TabIndex = 87;
+            this.txtEstimatedMinutes.Text = "30";
+            this.txtEstimatedMinutes.TextChanged += new System.EventHandler(this.txtEstimatedMinutes_TextChanged);
+            this.txtEstimatedMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstimatedMinutes_KeyPress);
+            this.txtEstimatedMinutes.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(737, 51);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(145, 32);
+            this.cbCategory.TabIndex = 86;
             // 
             // cbPriority
             // 
@@ -136,78 +154,13 @@
             this.cbPriority.Size = new System.Drawing.Size(145, 32);
             this.cbPriority.TabIndex = 84;
             // 
-            // cbCategory
+            // txtDescription
             // 
-            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(737, 51);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(145, 32);
-            this.cbCategory.TabIndex = 86;
-            // 
-            // txtEstimatedMinutes
-            // 
-            this.txtEstimatedMinutes.Location = new System.Drawing.Point(270, 194);
-            this.txtEstimatedMinutes.Name = "txtEstimatedMinutes";
-            this.txtEstimatedMinutes.Size = new System.Drawing.Size(189, 29);
-            this.txtEstimatedMinutes.TabIndex = 87;
-            this.txtEstimatedMinutes.Text = "30";
-            this.txtEstimatedMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstimatedMinutes_KeyPress);
-            this.txtEstimatedMinutes.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
-            // 
-            // dtpDueDate
-            // 
-            this.dtpDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDueDate.Location = new System.Drawing.Point(270, 113);
-            this.dtpDueDate.Name = "dtpDueDate";
-            this.dtpDueDate.Size = new System.Drawing.Size(189, 29);
-            this.dtpDueDate.TabIndex = 88;
-            // 
-            // txtTitle
-            // 
-            this.txtTitle.Location = new System.Drawing.Point(270, 50);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(189, 29);
-            this.txtTitle.TabIndex = 89;
-            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(732, 117);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(121, 25);
-            this.lblStatus.TabIndex = 91;
-            this.lblStatus.Text = "In Progress";
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label12.Location = new System.Drawing.Point(588, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(204, 27);
-            this.label12.TabIndex = 83;
-            this.label12.Text = "Create Date";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Image = global::PPTMS.Properties.Resources.loading;
-            this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label15.Location = new System.Drawing.Point(518, 115);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(163, 27);
-            this.label15.TabIndex = 90;
-            this.label15.Text = "Status";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtDescription.Location = new System.Drawing.Point(270, 292);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(635, 166);
+            this.txtDescription.TabIndex = 83;
             // 
             // label10
             // 
@@ -279,6 +232,54 @@
             this.label17.TabIndex = 74;
             this.label17.Text = "Priority";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTaskID
+            // 
+            this.lblTaskID.AutoSize = true;
+            this.lblTaskID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaskID.Location = new System.Drawing.Point(376, 155);
+            this.lblTaskID.Name = "lblTaskID";
+            this.lblTaskID.Size = new System.Drawing.Size(60, 25);
+            this.lblTaskID.TabIndex = 68;
+            this.lblTaskID.Text = "[???]";
+            // 
+            // lblCreateDate
+            // 
+            this.lblCreateDate.AutoSize = true;
+            this.lblCreateDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreateDate.Location = new System.Drawing.Point(843, 155);
+            this.lblCreateDate.Name = "lblCreateDate";
+            this.lblCreateDate.Size = new System.Drawing.Size(132, 25);
+            this.lblCreateDate.TabIndex = 84;
+            this.lblCreateDate.Text = "[????/??/??]";
+            // 
+            // lblMode
+            // 
+            this.lblMode.AutoSize = true;
+            this.lblMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMode.ForeColor = System.Drawing.Color.DarkViolet;
+            this.lblMode.Location = new System.Drawing.Point(566, 31);
+            this.lblMode.Name = "lblMode";
+            this.lblMode.Size = new System.Drawing.Size(163, 39);
+            this.lblMode.TabIndex = 86;
+            this.lblMode.Text = "Add Task";
+            this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Image = ((System.Drawing.Image)(resources.GetObject("label12.Image")));
+            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.Location = new System.Drawing.Point(588, 154);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(204, 27);
+            this.label12.TabIndex = 83;
+            this.label12.Text = "Create Date";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // picIcon
             // 

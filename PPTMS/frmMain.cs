@@ -28,7 +28,7 @@ namespace PPTMS
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            reminderTimer.Interval = 10 * 1000; // كل دقيقة
+            reminderTimer.Interval = 10 * 1000; // Every 10 second
             reminderTimer.Tick += ReminderTimer_Tick;
             reminderTimer.Start();
         }
