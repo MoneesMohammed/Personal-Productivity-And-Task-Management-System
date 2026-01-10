@@ -380,13 +380,61 @@ namespace PPTMS_DataAccessLayar
         {
             int CurrentStreak = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
-            string query = @"SELECT COUNT(*) AS CurrentStreak
+            string query = @"SELECT 
+                                 CASE 
+                                     WHEN h.Frequency = 0 THEN d.CurrentStreak
+                                     WHEN h.Frequency = 1 THEN w.CurrentStreak
+                                     WHEN h.Frequency = 2 THEN m.CurrentStreak
+                                     ELSE null
+                                 END AS CurrentStreak
+                             FROM Habits h
+                             OUTER APPLY
+                             (
+                             
+                             SELECT COUNT(*) AS CurrentStreak
                              FROM (
                                    SELECT LogDate,ROW_NUMBER() OVER (ORDER BY LogDate DESC) AS RowNumber
                                    FROM HabitLogs    
-                                   WHERE HabitID = @HabitID  
-                                 ) R1Logs
-                             WHERE DATEADD(DAY, -(RowNumber - 1), CAST(GETDATE() AS DATE)) = LogDate;";
+                                   WHERE HabitID = h.HabitID
+                                 ) DLogs
+                             WHERE DATEADD(DAY, -(RowNumber - 1), CAST(GETDATE() AS DATE)) = LogDate
+                             ) d
+                             
+                             OUTER APPLY
+                             (
+                             
+                             SELECT COUNT(*) AS CurrentStreak
+                             FROM (
+                                 SELECT DISTINCT DATEPART(YEAR, LogDate) AS Y, DATEPART(WEEK, LogDate) AS W,
+                                        ROW_NUMBER() OVER (ORDER BY DATEPART(YEAR, LogDate) DESC,DATEPART(WEEK, LogDate) DESC       
+                             ) AS RN
+                             FROM HabitLogs
+                             WHERE HabitID = h.HabitID
+                             ) w
+                             WHERE DATEADD(WEEK, -(RN - 1),
+                                   DATEADD(WEEK, DATEDIFF(WEEK, 0, GETDATE()), 0)
+                             )
+                             =
+                             DATEADD(WEEK, DATEDIFF(WEEK, 0, GETDATE()), 0)
+                             ) w
+                             
+                             OUTER APPLY
+                             (
+                             
+                             SELECT COUNT(*) AS CurrentStreak
+                             FROM (
+                                 SELECT DISTINCT DATEPART(YEAR, LogDate) AS Y,DATEPART(MONTH, LogDate) AS M,
+                                        ROW_NUMBER() OVER (ORDER BY DATEPART(YEAR, LogDate) DESC,DATEPART(MONTH, LogDate) DESC     
+                             ) AS RN
+                             FROM HabitLogs
+                             WHERE HabitID = h.HabitID
+                             ) MLogs
+                             WHERE DATEADD(MONTH, -(RN - 1),
+                                       DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)
+                                 )=DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1) 
+                             ) m
+                             
+                             WHERE h.HabitID = @HabitID; ";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -415,7 +463,18 @@ namespace PPTMS_DataAccessLayar
         {
             int BestStreak = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
-            string query = @"SELECT MAX(StreakCount) AS BestStreak
+            string query = @"
+                             SELECT 
+                                 CASE 
+                                     WHEN h.Frequency = 0 THEN d.BestStreak
+                                     WHEN h.Frequency = 1 THEN w.BestStreak
+                                     WHEN h.Frequency = 2 THEN m.BestStreak
+                                     ELSE null
+                                 END AS BestStreak
+                             FROM Habits h
+                             OUTER APPLY
+                             (
+                             SELECT MAX(StreakCount) AS BestStreak
                              FROM
                              (SELECT COUNT(*) AS StreakCount
                              FROM (
@@ -423,11 +482,66 @@ namespace PPTMS_DataAccessLayar
                                    FROM (
                                           SELECT LogDate,ROW_NUMBER() OVER (ORDER BY LogDate) AS rn   
                                           FROM HabitLogs
-                                          WHERE HabitID = @HabitID 
+                                          WHERE HabitID = h.HabitID
                                         ) R1Logs
                                   ) GroupedLogs
                                  GROUP BY grp
-                             ) AS Streaks;";
+                             ) AS Streaks
+                             
+                             ) d
+                             
+                             OUTER APPLY
+                             (
+                             SELECT MAX(StreakCount) AS BestStreak
+                             FROM
+                             (
+                                 SELECT COUNT(*) AS StreakCount
+                                 FROM
+                                 (
+                                     SELECT 
+                                         WeekStart,
+                                         DATEADD(WEEK, -rn, WeekStart) AS grp
+                                     FROM
+                                     (
+                                         SELECT DISTINCT
+                                             DATEADD(WEEK, DATEDIFF(WEEK, 0, LogDate), 0) AS WeekStart,
+                                             ROW_NUMBER() OVER (ORDER BY DATEADD(WEEK, DATEDIFF(WEEK, 0, LogDate), 0)) AS rn
+                                         FROM HabitLogs
+                                         WHERE HabitID =  h.HabitID
+                                     ) W
+                                 ) G
+                                 GROUP BY grp
+                             ) S
+                             
+                             
+                             ) w
+                             
+                             OUTER APPLY
+                             (
+                             SELECT MAX(StreakCount) AS BestStreak
+                             FROM
+                             (
+                                 SELECT COUNT(*) AS StreakCount
+                                 FROM
+                                 (
+                                     SELECT 
+                                         MonthStart,
+                                         DATEADD(MONTH, -rn, MonthStart) AS grp
+                                     FROM
+                                     (
+                                         SELECT DISTINCT
+                                             DATEFROMPARTS(YEAR(LogDate), MONTH(LogDate), 1) AS MonthStart,
+                                             ROW_NUMBER() OVER (ORDER BY DATEFROMPARTS(YEAR(LogDate), MONTH(LogDate), 1)) AS rn
+                                         FROM HabitLogs
+                                         WHERE HabitID = h.HabitID
+                                     ) M
+                                 ) G
+                                 GROUP BY grp
+                             ) S
+                             
+                             ) m
+                             
+                             WHERE h.HabitID = @HabitID; ";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -456,9 +570,54 @@ namespace PPTMS_DataAccessLayar
         {
             float CompletionRate = 0;
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
-            string query = @"SELECT CAST((COUNT(hl.LogID) * 100.0) / (DATEDIFF(DAY, MIN(h.CreateDate), CAST(GETDATE() AS DATE)) + 1)
+            string query = @"DECLARE @Today DATE = CAST(GETDATE() AS DATE);
+
+                             SELECT 
+                                 CASE 
+                                     WHEN h.Frequency = 0 THEN d.CompletionRate
+                                     WHEN h.Frequency = 1 THEN w.CompletionRate
+                                     WHEN h.Frequency = 2 THEN m.CompletionRate
+                                 END AS CompletionRate
+                             FROM Habits h
+                             
+                             CROSS APPLY
+                             (
+                                 SELECT CAST(h.CreateDate AS DATE) AS CreateDate
+                             ) cd
+                             
+                             OUTER APPLY
+                             (
+                                 SELECT CAST(
+                                     COUNT(DISTINCT CAST(hl.LogDate AS DATE)) * 100.0
+                                     /
+                                     (DATEDIFF(DAY, cd.CreateDate, @Today) + 1)
                                  AS DECIMAL(5,2)) AS CompletionRate
-                             FROM Habits h LEFT JOIN HabitLogs hl ON h.HabitID = hl.HabitID
+                                 FROM HabitLogs hl
+                                 WHERE hl.HabitID = h.HabitID
+                             ) d
+                             
+                             OUTER APPLY
+                             (
+                                 SELECT CAST(
+                                     COUNT(DISTINCT DATEADD(WEEK, DATEDIFF(WEEK, 0, hl.LogDate), 0)) * 100.0
+                                     /
+                                     (DATEDIFF(WEEK, cd.CreateDate, @Today) + 1)
+                                 AS DECIMAL(5,2)) AS CompletionRate
+                                 FROM HabitLogs hl
+                                 WHERE hl.HabitID = h.HabitID
+                             ) w
+                             
+                             OUTER APPLY
+                             (
+                                 SELECT CAST(
+                                     COUNT(DISTINCT DATEFROMPARTS(YEAR(hl.LogDate), MONTH(hl.LogDate), 1)) * 100.0
+                                     /
+                                     (DATEDIFF(MONTH, cd.CreateDate, @Today) + 1)
+                                 AS DECIMAL(5,2)) AS CompletionRate
+                                 FROM HabitLogs hl
+                                 WHERE hl.HabitID = h.HabitID
+                             ) m
+                             
                              WHERE h.HabitID = @HabitID;";
 
             SqlCommand command = new SqlCommand(query, connection);
