@@ -123,6 +123,12 @@
     <Compile Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.Designer.cs">
       <DependentUpon>CtrlViewProgress.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CtrlHome\CtrlHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CtrlHome\CtrlHome.Designer.cs">
+      <DependentUpon>CtrlHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CtrlStatistics\CtrlStatistics.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlHabit\View Progress\CtrlViewProgress.resx">
       <DependentUpon>CtrlViewProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CtrlHome\CtrlHome.resx">
+      <DependentUpon>CtrlHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CtrlStatistics\CtrlStatistics.resx">
       <DependentUpon>CtrlStatistics.cs</DependentUpon>
@@ -662,6 +671,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fast-time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

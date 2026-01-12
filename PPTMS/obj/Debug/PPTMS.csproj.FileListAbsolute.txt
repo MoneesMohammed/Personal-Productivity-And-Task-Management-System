@@ -41,3 +41,4 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlHabit.Habit_Info.CtrlFullHabitInfo.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlHabit.View_Progress.CtrlViewProgress.resources
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlStatistics.CtrlStatistics.resources
+C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS\obj\Debug\PPTMS.UserControls.CtrlHome.CtrlHome.resources

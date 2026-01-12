@@ -67,7 +67,7 @@ namespace PPTMS.UserControls.CtrlTasks
             }
 
             dgvTasks.Columns[0].Width = 150;
-            dgvTasks.Columns[1].Width = 170;
+            dgvTasks.Columns[1].Width = 210;
             dgvTasks.Columns[2].Width = 150;
             dgvTasks.Columns[3].Width = 141;
             dgvTasks.Columns[4].Width = 135;

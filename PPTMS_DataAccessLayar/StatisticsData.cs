@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -224,6 +225,41 @@ namespace PPTMS_DataAccessLayar
             return isFound;
         }
 
+        public static int DueToday(int UserID)
+        {
+            int CurrentStreak = 0;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"DECLARE @Today DATE = CAST(GETDATE() AS DATE)
+
+                             SELECT COUNT(*) AS DueToday
+                             FROM Tasks
+                             WHERE DueDate >= @Today
+                               AND DueDate < DATEADD(DAY, 1, @Today)
+                               AND Status NOT IN (2, 3)
+                               AND UserID = @UserID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null && int.TryParse(Result.ToString(), out int currentStreak))
+                {
+                    CurrentStreak = currentStreak;
+                }
+
+            }
+            catch
+            { CurrentStreak = 0; }
+            finally
+            { connection.Close(); }
+
+            return CurrentStreak;
+        }
 
     }
 }

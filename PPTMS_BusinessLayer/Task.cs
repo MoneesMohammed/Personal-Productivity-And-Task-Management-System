@@ -273,7 +273,13 @@ namespace PPTMS_BusinessLayer
             return clsTasksData.GetAllTasks(UserID);
         }
 
-       
+        public static DataTable GetTodayTasks(int UserID)
+        {
+            return clsTasksData.GetTodayTasks(UserID);
+        }
+
+
+
 
         public bool MarkAsInProgress()
         {

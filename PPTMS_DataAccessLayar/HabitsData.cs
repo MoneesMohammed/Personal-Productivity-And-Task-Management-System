@@ -344,7 +344,8 @@ namespace PPTMS_DataAccessLayar
             bool isFound = false;
 
             SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
-            string query = @"SELECT Found = 1 FROM HabitLogs
+            string query = @"SELECT Found = 1 
+                             FROM HabitLogs
                              WHERE HabitID = @HabitID
                              AND LogDate = CAST(GETDATE() AS DATE);";
 
@@ -642,5 +643,115 @@ namespace PPTMS_DataAccessLayar
 
             return CompletionRate;
         }
+
+        public static DataTable GetCheckInHabits(int UserID)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT h.Name AS [Habit Name],
+                             
+                                 CASE h.Frequency
+                                     WHEN 0 THEN 'Daily'
+                                     WHEN 1 THEN 'Weekly'
+                                     WHEN 2 THEN 'Monthly'
+                                     ELSE 'Unknown'
+                                 END AS [Frequency],
+                             
+                                 CASE 
+                                     WHEN EXISTS (
+                                         SELECT 1
+                                         FROM HabitLogs
+                                         WHERE HabitID = h.HabitID
+                                           AND LogDate >= CAST(GETDATE() AS DATE)
+                                           AND LogDate <  DATEADD(DAY, 1, CAST(GETDATE() AS DATE))
+                                     )
+                                     THEN 'Yes'
+                                     ELSE 'No'
+                                 END AS [Check In],
+                             
+                                 CASE 
+                                     WHEN hl.LastLogDate IS NULL THEN CAST(h.CreateDate AS DATE)
+                                     WHEN h.Frequency = 0 THEN DATEADD(DAY,   1, hl.LastLogDate)
+                                     WHEN h.Frequency = 1 THEN DATEADD(WEEK,  1, hl.LastLogDate)
+                                     WHEN h.Frequency = 2 THEN DATEADD(MONTH, 1, hl.LastLogDate)
+                                 END AS [Due Date]
+                             
+                             FROM Habits h
+                             OUTER APPLY
+                             (
+                                 SELECT MAX(LogDate) AS LastLogDate 
+                                 FROM HabitLogs
+                                 WHERE HabitID = h.HabitID
+                             ) hl
+                             WHERE h.UserID = @UserID AND h.IsArchived = 0;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                { dt.Load(reader); }
+
+                reader.Close();
+            }
+            catch
+            { }
+            finally
+            { connection.Close(); }
+
+            return dt;
+        }
+
+        public static DateTime DueDate(int HabitID)
+        {
+            DateTime DueDate = DateTime.Now;
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"SELECT 
+                              CASE WHEN hl.LastLogDate IS NULL THEN CAST(GETDATE() AS DATE) 
+                                   WHEN h.Frequency = 0 THEN DATEADD(DAY, 1, hl.LastLogDate) 
+                                   WHEN h.Frequency = 1 THEN DATEADD(DAY, 7, hl.LastLogDate) 
+                                   WHEN h.Frequency = 2 THEN DATEADD(DAY, 30, hl.LastLogDate)
+                              ELSE NULL
+                              END AS [Due Date] 
+                              
+                             FROM Habits h
+                             OUTER APPLY
+                             (
+                                 SELECT MAX(LogDate) AS LastLogDate 
+                                 FROM HabitLogs
+                                 WHERE HabitID = h.HabitID
+                             ) hl
+                             WHERE h.HabitID = @HabitID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@HabitID", HabitID);
+
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+
+                if (Result != null)
+                {
+                    DueDate = Convert.ToDateTime(Result.ToString());
+                }
+
+            }
+            catch
+            { DueDate = DateTime.Now; }
+            finally
+            { connection.Close(); }
+
+            return DueDate;
+
+
+        }
+
     }
 }

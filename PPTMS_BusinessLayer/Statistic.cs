@@ -152,6 +152,11 @@ namespace PPTMS_BusinessLayer
         }
 
 
+        public int DueToday()
+        {
+            return clsStatisticsData.DueToday(this.UserID);
+        }
+
 
     }
 }

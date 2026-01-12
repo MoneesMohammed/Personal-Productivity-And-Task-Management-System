@@ -140,6 +140,11 @@ namespace PPTMS_BusinessLayer
             return clsHabitsData.GetAllHabits(UserID);
         }
 
+        public static DataTable GetCheckInHabits(int UserID)
+        {
+            return clsHabitsData.GetCheckInHabits(UserID);
+        }
+
         public bool MarkAsArchived()
         { 
           return clsHabitsData.MarkAsArchived(this.HabitID);
@@ -179,5 +184,11 @@ namespace PPTMS_BusinessLayer
         {
             return clsHabitsData.CompletionRate(this.HabitID);
         }
+
+        public DateTime DueDate()
+        {
+            return clsHabitsData.DueDate(this.HabitID);
+        }
+
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CtrlViewProgress));
             this.label1 = new System.Windows.Forms.Label();
-            this.lblTodayStatus = new System.Windows.Forms.Label();
+            this.lblCheckInStatus = new System.Windows.Forms.Label();
             this.lblCompletionRate = new System.Windows.Forms.Label();
             this.lblCurrentStreak = new System.Windows.Forms.Label();
             this.lblBestStreak = new System.Windows.Forms.Label();
@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.pBox1 = new System.Windows.Forms.PictureBox();
+            this.lblDueDate = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,15 +65,15 @@
             this.label1.Text = "View Progress";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblTodayStatus
+            // lblCheckInStatus
             // 
-            this.lblTodayStatus.AutoSize = true;
-            this.lblTodayStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayStatus.Location = new System.Drawing.Point(359, 401);
-            this.lblTodayStatus.Name = "lblTodayStatus";
-            this.lblTodayStatus.Size = new System.Drawing.Size(198, 31);
-            this.lblTodayStatus.TabIndex = 105;
-            this.lblTodayStatus.Text = "Not done today";
+            this.lblCheckInStatus.AutoSize = true;
+            this.lblCheckInStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheckInStatus.Location = new System.Drawing.Point(359, 401);
+            this.lblCheckInStatus.Name = "lblCheckInStatus";
+            this.lblCheckInStatus.Size = new System.Drawing.Size(198, 31);
+            this.lblCheckInStatus.TabIndex = 105;
+            this.lblCheckInStatus.Text = "Not done today";
             // 
             // lblCompletionRate
             // 
@@ -117,7 +119,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(854, 401);
+            this.lblStatus.Location = new System.Drawing.Point(854, 463);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(75, 31);
             this.lblStatus.TabIndex = 115;
@@ -160,7 +162,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Image = global::PPTMS.Properties.Resources.status;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(628, 396);
+            this.label11.Location = new System.Drawing.Point(628, 458);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(210, 41);
             this.label11.TabIndex = 111;
@@ -212,7 +214,7 @@
             this.labelToday.Name = "labelToday";
             this.labelToday.Size = new System.Drawing.Size(259, 41);
             this.labelToday.TabIndex = 103;
-            this.labelToday.Text = "Today Status";
+            this.labelToday.Text = "Check-In Status";
             this.labelToday.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -262,10 +264,34 @@
             this.pBox1.TabIndex = 73;
             this.pBox1.TabStop = false;
             // 
+            // lblDueDate
+            // 
+            this.lblDueDate.AutoSize = true;
+            this.lblDueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDueDate.Location = new System.Drawing.Point(854, 397);
+            this.lblDueDate.Name = "lblDueDate";
+            this.lblDueDate.Size = new System.Drawing.Size(75, 31);
+            this.lblDueDate.TabIndex = 118;
+            this.lblDueDate.Text = "[???]";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Image = global::PPTMS.Properties.Resources.start_date;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(628, 392);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(210, 41);
+            this.label6.TabIndex = 117;
+            this.label6.Text = "Due Date";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // CtrlViewProgress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblDueDate);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblHabitName);
@@ -277,7 +303,7 @@
             this.Controls.Add(this.lblCompletionRate);
             this.Controls.Add(this.lblCurrentStreak);
             this.Controls.Add(this.lblBestStreak);
-            this.Controls.Add(this.lblTodayStatus);
+            this.Controls.Add(this.lblCheckInStatus);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelToday);
             this.Controls.Add(this.label3);
@@ -303,7 +329,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelToday;
-        private System.Windows.Forms.Label lblTodayStatus;
+        private System.Windows.Forms.Label lblCheckInStatus;
         private System.Windows.Forms.Label lblCompletionRate;
         private System.Windows.Forms.Label lblCurrentStreak;
         private System.Windows.Forms.Label lblBestStreak;
@@ -315,5 +341,7 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblHabitName;
         private System.Windows.Forms.Label lblFrequency;
+        private System.Windows.Forms.Label lblDueDate;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -62,8 +62,11 @@ namespace PPTMS.UserControls.CtrlHabit.View_Progress
             lblCurrentStreak.Text = _Habit.CurrentStreak().ToString("0");
             lblBestStreak.Text = _Habit.BestStreak().ToString("0");
             lblCompletionRate.Text = _Habit.CompletionRate().ToString()+"%";
-            lblTodayStatus.Text = _Habit.IsCheckIn() ? "Done today" : "Not done today";
             labelToday.Image = _Habit.IsCheckIn() ? Resources.calendar1 : Resources.calendars;
+
+            string str = _Habit.Frequency == clsHabit.enFrequency.Daily ? "today" : _Habit.Frequency == clsHabit.enFrequency.Weekly ? "this Week" : "this Month ";
+            lblDueDate.Text = _Habit.DueDate().ToString("dd/MM/yyyy");
+            lblCheckInStatus.Text = _Habit.IsCheckIn() ? $"Done {str}" : $"Not done {str}";
 
         }
 
@@ -79,7 +82,7 @@ namespace PPTMS.UserControls.CtrlHabit.View_Progress
             lblCurrentStreak.Text  = "[???]";
             lblBestStreak.Text     = "[???]";
             lblCompletionRate.Text = "[???]";
-            lblTodayStatus.Text    = "[???]";
+            lblCheckInStatus.Text    = "[???]";
         }
 
         private void btnBack_Click(object sender, EventArgs e)

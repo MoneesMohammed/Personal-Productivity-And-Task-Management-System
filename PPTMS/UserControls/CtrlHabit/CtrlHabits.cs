@@ -87,7 +87,7 @@ namespace PPTMS.UserControls.CtrlHabit
             }
 
             dgvHabits.Columns[0].Width = 150;
-            dgvHabits.Columns[1].Width = 195;
+            dgvHabits.Columns[1].Width = 235;
             dgvHabits.Columns[2].Width = 150;
             dgvHabits.Columns[3].Width = 99;
             dgvHabits.Columns[4].Width = 114;

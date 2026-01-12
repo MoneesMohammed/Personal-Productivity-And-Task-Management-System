@@ -1,11 +1,12 @@
 ﻿using PPTMS.Global_Classes;
 using PPTMS.UserControls.CtrlCategories;
 using PPTMS.UserControls.CtrlHabit;
+using PPTMS.UserControls.CtrlHome;
+using PPTMS.UserControls.CtrlStatistics;
 using PPTMS.UserControls.CtrlTasks;
 using PPTMS.UserControls.CtrlUser;
 using PPTMS_BusinessLayer;
 using System;
-using PPTMS.UserControls.CtrlStatistics;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -31,6 +32,9 @@ namespace PPTMS
             reminderTimer.Interval = 10 * 1000; // Every 10 second
             reminderTimer.Tick += ReminderTimer_Tick;
             reminderTimer.Start();
+
+            CtrlHome ctrlHome = new CtrlHome();
+            LoadCenteredControl(ctrlHome);
         }
 
         private void ReminderTimer_Tick(object sender, EventArgs e)
@@ -74,9 +78,14 @@ namespace PPTMS
             this.Focus();
         }
 
+        private void tsmAddReminder_Click(object sender, EventArgs e)
+        {
+            if (!this.Focus())
+                this.Focus();
 
-
-
+            CtrlFullTasks ctrlTasks = new CtrlFullTasks();
+            LoadCenteredControl(ctrlTasks);
+        }
 
         private void panelSidebar_Paint(object sender, PaintEventArgs e)
         {
@@ -165,5 +174,14 @@ namespace PPTMS
             CtrlFullHabits ctrlHabits = new CtrlFullHabits();
             LoadCenteredControl(ctrlHabits);
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            CtrlHome ctrlHome = new CtrlHome();
+
+            LoadCenteredControl(ctrlHome);
+        }
+
+        
     }
 }

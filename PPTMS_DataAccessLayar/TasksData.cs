@@ -216,6 +216,58 @@ namespace PPTMS_DataAccessLayar
             return dt;
         }
 
+        public static DataTable GetTodayTasks(int UserID)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataSettings.ConnectionString);
+            string query = @"DECLARE @Today DATE = CAST(GETDATE() AS DATE)
+                             SELECT t.Title as [Title Task], 
+                             CASE WHEN t.Priority = 0 THEN 'Low' 
+                                  WHEN t.Priority = 1 THEN 'Medium' 
+                                  WHEN t.Priority = 2 THEN 'High' 
+                                  WHEN t.Priority = 3 THEN 'Critical' 
+                             ELSE 'Unknown' 
+                             END AS Priority
+                             
+                             , CAST(t.DueDate AS DATE) as [Due Date]
+                             FROM Tasks t
+                             WHERE DueDate >= @Today
+                               AND DueDate < DATEADD(DAY, 1, @Today)
+                               AND Status NOT IN (2, 3)
+                               AND UserID = @UserID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+
+                    dt.Load(reader);
+
+                }
+
+                reader.Close();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return dt;
+        }
+
+
         public static bool SetStatus(int TaskID, byte Status)
         {
             int RowAffected = 0;

@@ -88,9 +88,9 @@
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(732, 117);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(121, 25);
+            this.lblStatus.Size = new System.Drawing.Size(54, 25);
             this.lblStatus.TabIndex = 91;
-            this.lblStatus.Text = "In Progress";
+            this.lblStatus.Text = "New";
             // 
             // label15
             // 

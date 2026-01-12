@@ -53,8 +53,8 @@ namespace PPTMS.UserControls.CtrlCategories
                 return;
             }
 
-            dgvCategories.Columns[0].Width = 150;
-            dgvCategories.Columns[1].Width = 224;
+            dgvCategories.Columns[0].Width = 170;
+            dgvCategories.Columns[1].Width = 244;
             
         }
 
