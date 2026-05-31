@@ -4,3 +4,9 @@ C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_DataAccessLayar\obj\Debug\PP
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.csproj.CoreCompileInputs.cache
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.dll
 C:\Users\nuwmo\OneDrive\Desktop\pogrimming C#\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.pdb
+C:\Users\nuwmo\Downloads\My_Projects\Personal-Productivity-And-Task-Management-System\Project_PPTMS\PPTMS_DataAccessLayar\bin\Debug\PPTMS_DataAccessLayar.dll
+C:\Users\nuwmo\Downloads\My_Projects\Personal-Productivity-And-Task-Management-System\Project_PPTMS\PPTMS_DataAccessLayar\bin\Debug\PPTMS_DataAccessLayar.pdb
+C:\Users\nuwmo\Downloads\My_Projects\Personal-Productivity-And-Task-Management-System\Project_PPTMS\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.csproj.AssemblyReference.cache
+C:\Users\nuwmo\Downloads\My_Projects\Personal-Productivity-And-Task-Management-System\Project_PPTMS\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.csproj.CoreCompileInputs.cache
+C:\Users\nuwmo\Downloads\My_Projects\Personal-Productivity-And-Task-Management-System\Project_PPTMS\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.dll
+C:\Users\nuwmo\Downloads\My_Projects\Personal-Productivity-And-Task-Management-System\Project_PPTMS\PPTMS_DataAccessLayar\obj\Debug\PPTMS_DataAccessLayar.pdb
