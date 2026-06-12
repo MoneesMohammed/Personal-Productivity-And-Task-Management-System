@@ -83,7 +83,7 @@ Relationships are designed to ensure data integrity and scalability.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/USERNAME/Personal-Productivity-And-Task-Management-System.git
+   git clone https://github.com/MoneesMohammed/Personal-Productivity-And-Task-Management-System.git
 
 2. Restore the database:
     - Database name must be: PPTMS
